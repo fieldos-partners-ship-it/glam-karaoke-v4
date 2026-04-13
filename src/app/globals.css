@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS custom properties for brand and animation */
+:root {
+  --font-clash: 'Clash Display', system-ui, sans-serif;
+  --font-inter: 'Inter', system-ui, sans-serif;
+  --stage-noir: #0E1117;
+  --glass-surface: #1A2033;
+  --neon-teal: #00D9C4;
+  --neon-teal-hover: #00BFB0;
+  --electric-violet: #7C4DFF;
+  --soft-white: #F2F0F8;
+  --cool-mist: #8B8FA8;
+  /* Animation timing */
+  --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-entrance: 500ms;
+  --duration-stat: 1500ms;
+  --duration-stagger: 60ms;
+}
+
+/* GC-7: 56px padding-bottom for MobileStickyBar on mobile */
+body {
+  background: #0E1117;
+  color: #F2F0F8;
+  font-family: var(--font-inter);
+  padding-bottom: 56px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* GC-7: Remove MobileStickyBar padding at md+ (768px+) */
+@media (min-width: 768px) {
+  body {
+    padding-bottom: 0;
+  }
+}
+
+/* AP-039: Scroll reveal animation classes — only used with verified IntersectionObserver or Framer Motion whileInView */
+/* Note: These CSS classes are provided as fallback. Primary animation is Framer Motion whileInView. */
+.anim-fade-up {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity var(--duration-entrance) var(--ease-spring),
+              transform var(--duration-entrance) var(--ease-spring);
+}
+
+.anim-fade-left {
+  opacity: 0;
+  transform: translateX(-24px);
+  transition: opacity var(--duration-entrance) var(--ease-spring),
+              transform var(--duration-entrance) var(--ease-spring);
+}
+
+.anim-fade-right {
+  opacity: 0;
+  transform: translateX(24px);
+  transition: opacity var(--duration-entrance) var(--ease-spring),
+              transform var(--duration-entrance) var(--ease-spring);
+}
+
+.in-view {
+  opacity: 1;
+  transform: none;
+}
+
+/* prefers-reduced-motion: disable all transitions */
+@media (prefers-reduced-motion: reduce) {
+  .anim-fade-up,
+  .anim-fade-left,
+  .anim-fade-right {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Horizontal scroll containers — no page-level overflow */
+.scroll-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: #1A2033 transparent;
+}
+
+.scroll-container::-webkit-scrollbar {
+  height: 4px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: #1A2033;
+  border-radius: 2px;
+}
+
+/* Nav hover underline effect */
+.nav-link-hover {
+  position: relative;
+}
+
+.nav-link-hover::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background: #00D9C4;
+  transition: width 150ms ease-out;
+}
+
+.nav-link-hover:hover::after {
+  width: 100%;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

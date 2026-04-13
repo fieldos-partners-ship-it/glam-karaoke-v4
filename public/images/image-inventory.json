@@ -1,0 +1,83 @@
+{
+  "business": "Glam Karaoke",
+  "address": "4369 John Marr Dr, Annandale, VA 22003, USA",
+  "place_id": "ChIJT5fw6AWzt4kR_11B3_sLbXo",
+  "rating": 4.2,
+  "review_count": 250,
+  "phone": "(571) 378-0910",
+  "website": "https://glamkaraokeva.com/",
+  "photos_available": 10,
+  "photos_downloaded": 10,
+  "images": [
+    {
+      "filename": "storefront-1.jpg",
+      "category": "exterior",
+      "size_kb": 229,
+      "attribution": "Glam Karaoke",
+      "suggested_placement": "hero background, about page"
+    },
+    {
+      "filename": "interior-2.jpg",
+      "category": "interior",
+      "size_kb": 491,
+      "attribution": "Austin Graff",
+      "suggested_placement": "hero background, about page, rooms page"
+    },
+    {
+      "filename": "ambiance-3.jpg",
+      "category": "ambiance",
+      "size_kb": 195,
+      "attribution": "M M",
+      "suggested_placement": "section background, gallery, about page"
+    },
+    {
+      "filename": "ambiance-4.jpg",
+      "category": "ambiance",
+      "size_kb": 315,
+      "attribution": "Glam Karaoke",
+      "suggested_placement": "section background, gallery, about page"
+    },
+    {
+      "filename": "detail-5.jpg",
+      "category": "detail",
+      "size_kb": 494,
+      "attribution": "Glam Karaoke",
+      "suggested_placement": "service cards, gallery, menu page"
+    },
+    {
+      "filename": "detail-6.jpg",
+      "category": "detail",
+      "size_kb": 346,
+      "attribution": "Glam Karaoke",
+      "suggested_placement": "service cards, gallery, menu page"
+    },
+    {
+      "filename": "detail-7.jpg",
+      "category": "detail",
+      "size_kb": 377,
+      "attribution": "Glam Karaoke",
+      "suggested_placement": "service cards, gallery, menu page"
+    },
+    {
+      "filename": "photo-8.jpg",
+      "category": "photo",
+      "size_kb": 371,
+      "attribution": "Carol",
+      "suggested_placement": "gallery, section backgrounds"
+    },
+    {
+      "filename": "photo-9.jpg",
+      "category": "photo",
+      "size_kb": 377,
+      "attribution": "Melinda",
+      "suggested_placement": "gallery, section backgrounds"
+    },
+    {
+      "filename": "photo-10.jpg",
+      "category": "photo",
+      "size_kb": 198,
+      "attribution": "Glam Karaoke",
+      "suggested_placement": "gallery, section backgrounds"
+    }
+  ]
+}
