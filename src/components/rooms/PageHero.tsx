@@ -43,11 +43,11 @@ export default function PageHero({
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-3xl mx-auto">
         {eyebrow && (
-          <p className="text-neon-teal font-inter font-semibold text-[11px] tracking-[0.12em] uppercase mb-4">
+          <p className="menu-kicker mb-4">
             {eyebrow}
           </p>
         )}
-        <h1 className="font-clash font-bold text-[36px] md:text-[56px] text-soft-white leading-[1.05] tracking-[-0.02em]">
+        <h1 className="menu-heading text-[42px] md:text-[64px]">
           {title}
         </h1>
       </div>

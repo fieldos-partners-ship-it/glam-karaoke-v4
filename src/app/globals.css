@@ -2,17 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-/* CSS custom properties for brand and animation */
+/* CSS custom properties for brand, typography, and animation */
 :root {
-  --font-clash: 'Clash Display', system-ui, sans-serif;
-  --font-inter: 'Inter', system-ui, sans-serif;
+  --font-clash: 'League Spartan', system-ui, sans-serif;
+  --font-inter: 'Big Shoulders Text', system-ui, sans-serif;
   --stage-noir: #0E1117;
-  --glass-surface: #1A2033;
-  --neon-teal: #00D9C4;
-  --neon-teal-hover: #00BFB0;
-  --electric-violet: #7C4DFF;
+  --logo-noir: #111111;
+  --glass-surface: #181218;
+  --neon-teal: #E51997;
+  --neon-teal-hover: #FF4AB8;
+  --electric-violet: #B31269;
   --soft-white: #F2F0F8;
-  --cool-mist: #8B8FA8;
+  --cool-mist: #A793A7;
   /* Animation timing */
   --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
   --duration-entrance: 500ms;
@@ -109,12 +110,54 @@ body {
   left: 0;
   width: 0;
   height: 1.5px;
-  background: #00D9C4;
+  background: var(--neon-teal);
   transition: width 150ms ease-out;
+}
+
+::selection {
+  background: rgba(229, 25, 151, 0.24);
+  color: #F2F0F8;
 }
 
 .nav-link-hover:hover::after {
   width: 100%;
+}
+
+@layer components {
+  .menu-kicker {
+    color: var(--neon-teal);
+    font-family: var(--font-inter);
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  .menu-heading {
+    color: var(--soft-white);
+    font-family: var(--font-clash);
+    font-weight: 800;
+    letter-spacing: -0.045em;
+    line-height: 0.96;
+    text-wrap: balance;
+  }
+
+  .menu-subtext {
+    color: var(--cool-mist);
+    font-family: var(--font-inter);
+    letter-spacing: 0.02em;
+    line-height: 1.6;
+    text-wrap: pretty;
+  }
+
+  .menu-subtext-bright {
+    color: rgba(242, 240, 248, 0.82);
+    font-family: var(--font-inter);
+    letter-spacing: 0.02em;
+    line-height: 1.6;
+    text-wrap: pretty;
+  }
 }
 
 @layer utilities {

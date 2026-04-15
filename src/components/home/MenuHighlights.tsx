@@ -14,21 +14,21 @@ export default function MenuHighlights() {
           {/* Left column — 40% copy */}
           <div className="lg:w-[40%] flex-shrink-0">
             {/* Eyebrow */}
-            <p className="text-neon-teal font-inter font-semibold text-[11px] tracking-[0.12em] uppercase mb-3">
+            <p className="menu-kicker mb-4">
               THE MENU
             </p>
 
-            <h2 className="font-clash font-semibold text-[30px] md:text-[44px] text-soft-white leading-[1.1] tracking-[-0.01em] mb-4">
+            <h2 className="menu-heading mb-4 text-[36px] md:text-[52px]">
               Korean-American Kitchen
             </h2>
 
-            <p className="text-cool-mist font-inter text-base leading-relaxed mb-5">
+            <p className="menu-subtext mb-5 text-[19px]">
               Real food made for sharing. Bulgogi nachos. Kimchi fried rice. 16 soju flavors.
               Order from your room — no need to break the mood.
             </p>
 
             {/* Customer language subtext */}
-            <p className="font-inter font-semibold text-soft-white/80 text-sm italic mb-6 leading-relaxed">
+            <p className="menu-subtext-bright mb-6 text-[17px] italic">
               &ldquo;Bulgogi nachos. Kimchi fried rice. 16 soju flavors.&rdquo;
             </p>
 

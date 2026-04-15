@@ -11,12 +11,13 @@ const config: Config = {
     extend: {
       colors: {
         "stage-noir": "#0E1117",
-        "glass-surface": "#1A2033",
-        "neon-teal": "#00D9C4",
-        "neon-teal-hover": "#00BFB0",
-        "electric-violet": "#7C4DFF",
+        "logo-noir": "#111111",
+        "glass-surface": "#181218",
+        "neon-teal": "#E51997",
+        "neon-teal-hover": "#FF4AB8",
+        "electric-violet": "#B31269",
         "soft-white": "#F2F0F8",
-        "cool-mist": "#8B8FA8",
+        "cool-mist": "#A793A7",
       },
       fontFamily: {
         clash: ["var(--font-clash)", "system-ui", "sans-serif"],

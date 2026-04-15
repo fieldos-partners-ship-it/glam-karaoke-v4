@@ -28,13 +28,13 @@ export default function PrivateEventsHero() {
       {/* Content — right-of-center */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-xl ml-auto md:ml-0 md:max-w-lg">
-          <p className="text-neon-teal font-inter font-semibold text-[11px] tracking-[0.12em] uppercase mb-4">
+          <p className="menu-kicker mb-4">
             PRIVATE EVENTS
           </p>
-          <h1 className="font-clash font-bold text-[40px] md:text-[56px] text-soft-white leading-[1.05] tracking-[-0.02em] mb-4">
+          <h1 className="menu-heading mb-4 text-[48px] md:text-[68px]">
             Your Group.<br />Your Soundtrack.<br />Your Night.
           </h1>
-          <p className="font-inter text-soft-white/80 text-base md:text-lg leading-relaxed">
+          <p className="menu-subtext-bright text-[19px] md:text-[22px]">
             Party Suite holds up to 20 guests. Starts at $70/hr.
             DJ-ready. Full bar access.
           </p>

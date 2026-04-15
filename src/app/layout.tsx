@@ -4,8 +4,7 @@
 // AP-043: globals.css imported here
 
 import type { Metadata } from 'next'
-import localFont from 'next/font/local'
-import { Inter } from 'next/font/google'
+import { Big_Shoulders_Text, League_Spartan } from 'next/font/google'
 import Script from 'next/script'
 import './globals.css'
 import Header from '@/components/layout/Header'
@@ -14,31 +13,16 @@ import MobileStickyBar from '@/components/layout/MobileStickyBar'
 import { ga4IsConfigured, ga4MeasurementId, siteUrl } from '@/data/content'
 import { buildBarOrClubSchema, buildWebSiteSchema } from '@/lib/seo/schemas'
 
-// Clash Display — loaded via next/font/local using downloaded .woff2 files
-// Weights: 500 (Medium), 600 (Semibold), 700 (Bold)
-const clashDisplay = localFont({
-  src: [
-    {
-      path: '../../public/fonts/ClashDisplay-500.woff2',
-      weight: '500',
-      style: 'normal',
-    },
-    {
-      path: '../../public/fonts/ClashDisplay-600.woff2',
-      weight: '600',
-      style: 'normal',
-    },
-    {
-      path: '../../public/fonts/ClashDisplay-700.woff2',
-      weight: '700',
-      style: 'normal',
-    },
-  ],
+// League Spartan — blocky geometric display for hero headlines and menu-board punches
+const leagueSpartan = League_Spartan({
+  subsets: ['latin'],
+  weight: ['700', '800'],
   variable: '--font-clash',
   display: 'swap',
 })
 
-const inter = Inter({
+// Big Shoulders Text — signage-inspired supporting face for nav, subheads, buttons, and copy
+const bigShouldersText = Big_Shoulders_Text({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
   variable: '--font-inter',
@@ -87,7 +71,7 @@ export default function RootLayout({
   const webSiteSchema = buildWebSiteSchema()
 
   return (
-    <html lang="en" className={`${clashDisplay.variable} ${inter.variable}`}>
+    <html lang="en" className={`${leagueSpartan.variable} ${bigShouldersText.variable}`}>
       <head>
         {/* GC-4: GA4 Script — only injected when ga4IsConfigured === true */}
         {ga4IsConfigured && (

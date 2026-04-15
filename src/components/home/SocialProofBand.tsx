@@ -55,7 +55,7 @@ export default function SocialProofBand() {
                   <span>{stat.display}{stat.suffix}</span>
                 )}
               </div>
-              <p className="text-soft-white/70 font-inter text-sm font-medium">
+              <p className="font-inter text-[13px] font-medium uppercase tracking-[0.14em] text-soft-white/72">
                 {stat.label}
               </p>
             </div>

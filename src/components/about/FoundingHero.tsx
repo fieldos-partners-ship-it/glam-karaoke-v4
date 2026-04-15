@@ -28,16 +28,16 @@ export default function FoundingHero() {
       {/* Content */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 md:pb-20">
         {/* Eyebrow */}
-        <p className="text-neon-teal font-inter font-semibold text-[11px] tracking-[0.12em] uppercase mb-4">
+        <p className="menu-kicker mb-4">
           Est. March 18, 2022
         </p>
 
         {/* Wordmark */}
-        <h1 className="font-clash font-bold text-[48px] md:text-[72px] text-soft-white leading-[1.0] tracking-[-0.02em] mb-4">
+        <h1 className="menu-heading mb-4 text-[52px] md:text-[76px]">
           Glam Karaoke
         </h1>
 
-        <p className="font-inter text-soft-white/80 text-base md:text-lg max-w-xl leading-relaxed">
+        <p className="menu-subtext-bright max-w-xl text-[19px] md:text-[22px]">
           We opened Glam to give Northern Virginia the night-out destination it deserved.
           12 private rooms. A live main stage. And a kitchen that means it.
         </p>

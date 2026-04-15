@@ -9,11 +9,12 @@ import BenefitCards from '@/components/private-events/BenefitCards'
 import OccasionStrip from '@/components/private-events/OccasionStrip'
 import PartyStatsBar from '@/components/private-events/PartyStatsBar'
 import PhoneLink from '@/components/ui/PhoneLink'
+import TestimonialCarousel from '@/components/ui/TestimonialCarousel'
 import { featuredReviews } from '@/data/content'
 
 export default function PrivateEventsPage() {
   // Use group-experience-focused reviews for this page
-  const groupReviews = featuredReviews.filter(r => r.name === 'Marcus Williams' || r.name === 'Jenny Park')
+  const groupReviews = featuredReviews.filter(r => r.contexts?.includes('groups'))
 
   return (
     <>
@@ -41,30 +42,14 @@ export default function PrivateEventsPage() {
         <section className="bg-stage-noir py-20" aria-label="What groups say about Glam Karaoke">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <p className="text-neon-teal font-inter font-semibold text-[11px] tracking-[0.12em] uppercase mb-3">
+              <p className="menu-kicker mb-4">
                 WHAT GROUPS SAY
               </p>
-              <h2 className="font-clash font-semibold text-[28px] md:text-[38px] text-soft-white leading-[1.1] tracking-[-0.01em]">
+              <h2 className="menu-heading text-[34px] md:text-[46px]">
                 Real Nights. Real People.
               </h2>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {groupReviews.map((review) => (
-                <div
-                  key={review.name}
-                  className="bg-glass-surface rounded-2xl border border-white/[0.06] p-6"
-                >
-                  <blockquote className="font-inter text-soft-white/90 text-base leading-relaxed mb-4">
-                    &ldquo;{review.text}&rdquo;
-                  </blockquote>
-                  {/* AP-006: Full name attribution */}
-                  <footer>
-                    <p className="font-inter font-semibold text-soft-white text-sm">{review.name}</p>
-                    <p className="font-inter text-cool-mist text-xs mt-0.5">{review.source} Review</p>
-                  </footer>
-                </div>
-              ))}
-            </div>
+            <TestimonialCarousel reviews={groupReviews} />
           </div>
         </section>
       )}

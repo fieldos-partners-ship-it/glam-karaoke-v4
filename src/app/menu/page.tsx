@@ -29,7 +29,7 @@ export default function MenuPage() {
       {/* Menu CTA */}
       <section className="bg-stage-noir py-16 border-t border-white/[0.06]" aria-label="Contact us">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="font-clash font-semibold text-[24px] md:text-[32px] text-soft-white mb-3">
+          <p className="font-clash font-bold text-[24px] md:text-[32px] text-soft-white tracking-[-0.02em] mb-3">
             Hungry? Thirsty? You know what to do.
           </p>
           <p className="text-cool-mist font-inter text-base mb-6">

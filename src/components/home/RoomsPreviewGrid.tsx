@@ -35,10 +35,10 @@ export default function RoomsPreviewGrid() {
       <div className="max-w-7xl mx-auto">
         {/* Section heading */}
         <div className="text-center mb-12">
-          <p className="text-neon-teal font-inter font-semibold text-[11px] tracking-[0.12em] uppercase mb-3">
+          <p className="menu-kicker mb-4">
             OUR ROOMS
           </p>
-          <h2 className="font-clash font-semibold text-[30px] md:text-[44px] text-soft-white leading-[1.1] tracking-[-0.01em]">
+          <h2 className="menu-heading text-[36px] md:text-[52px]">
             Find Your Room. Bring Your People.
           </h2>
         </div>
@@ -82,8 +82,8 @@ function RoomCard({ room, elevated, wide, onClick }: RoomCardProps) {
   return (
     <div
       className={`relative rounded-2xl overflow-hidden bg-glass-surface border border-white/[0.06] group
-        ${elevated ? 'shadow-[0_0_0_1.5px_#00D9C4,0_8px_32px_rgba(0,0,0,0.5)]' : 'shadow-[0_4px_24px_rgba(0,0,0,0.4)]'}
-        transition-all duration-200 hover:shadow-[0_0_0_1.5px_rgba(0,217,196,0.6),0_8px_32px_rgba(0,0,0,0.5)]
+        ${elevated ? 'shadow-[0_0_0_1.5px_#E51997,0_8px_32px_rgba(0,0,0,0.5)]' : 'shadow-[0_4px_24px_rgba(0,0,0,0.4)]'}
+        transition-all duration-200 hover:shadow-[0_0_0_1.5px_rgba(229,25,151,0.6),0_8px_32px_rgba(0,0,0,0.5)]
       `}
     >
       {/* Most Popular badge */}
@@ -94,16 +94,14 @@ function RoomCard({ room, elevated, wide, onClick }: RoomCardProps) {
       )}
 
       {/* Image — 3:2 aspect ratio, hover scale */}
-      <div className={`overflow-hidden ${wide ? 'aspect-[21/6] md:aspect-[16/5]' : 'aspect-[3/2]'}`}>
-        <div className="w-full h-full group-hover:scale-[1.03] transition-transform duration-[350ms] ease-[cubic-bezier(0.16,1,0.3,1)]">
-          <Image
-            src={room.image}
-            alt={`${room.name} — ${room.capacity} private karaoke room at Glam Karaoke`}
-            fill
-            className="object-cover"
-            sizes={wide ? '100vw' : '(max-width: 768px) 100vw, 50vw'}
-          />
-        </div>
+      <div className={`relative overflow-hidden ${wide ? 'aspect-[21/6] md:aspect-[16/5]' : 'aspect-[3/2]'}`}>
+        <Image
+          src={room.image}
+          alt={`${room.name} — ${room.capacity} private karaoke room at Glam Karaoke`}
+          fill
+          className="object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.06]"
+          sizes={wide ? '100vw' : '(max-width: 768px) 100vw, 50vw'}
+        />
       </div>
 
       {/* Card content */}

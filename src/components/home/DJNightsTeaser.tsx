@@ -28,13 +28,13 @@ export default function DJNightsTeaser() {
           transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
           className="mb-10"
         >
-          <p className="text-neon-teal font-inter font-semibold text-[11px] tracking-[0.12em] uppercase mb-3">
+          <p className="menu-kicker mb-4">
             DJ NIGHTS + EVENTS
           </p>
-          <h2 className="font-clash font-semibold text-[30px] md:text-[44px] text-soft-white leading-[1.1] tracking-[-0.01em]">
+          <h2 className="menu-heading text-[36px] md:text-[52px]">
             Every Friday. DJ @loxs1ck.
           </h2>
-          <p className="text-cool-mist font-inter text-base mt-3 max-w-lg">
+          <p className="menu-subtext mt-4 max-w-lg text-[19px]">
             Doors open at 5 PM. Happy hour until 8. DJ hits the main stage at 9.
           </p>
         </motion.div>
@@ -62,30 +62,30 @@ export default function DJNightsTeaser() {
                   {event.dateNumber}
                 </span>
                 <div className="flex items-center gap-2 mt-1">
-                  <span className="font-inter font-semibold text-[11px] tracking-[0.12em] uppercase text-cool-mist">
+                  <span className="font-inter font-semibold text-[11px] tracking-[0.18em] uppercase text-cool-mist">
                     {event.date}
                   </span>
-                  <span className="font-inter font-semibold text-[11px] tracking-[0.12em] uppercase text-cool-mist">
+                  <span className="font-inter font-semibold text-[11px] tracking-[0.18em] uppercase text-cool-mist">
                     {event.month}
                   </span>
                 </div>
               </div>
 
               {/* Event info */}
-              <h3 className="font-clash font-semibold text-xl text-soft-white mb-1">
+              <h3 className="font-clash font-bold text-[24px] text-soft-white mb-1 tracking-[-0.02em]">
                 {event.title}
               </h3>
-              <p className="text-neon-teal font-inter font-semibold text-sm mb-1">
+              <p className="text-neon-teal font-inter font-semibold text-[15px] uppercase tracking-[0.12em] mb-1">
                 {event.dj}
               </p>
-              <p className="text-cool-mist font-inter text-sm mb-5">
+              <p className="text-cool-mist font-inter text-[15px] tracking-[0.03em] mb-5">
                 {event.time}
               </p>
 
               {/* RSVP CTA */}
               <PhoneLink
                 source={`dj-teaser-${event.id}`}
-                className="inline-flex items-center gap-2 font-inter font-semibold text-sm min-h-[44px]"
+                className="inline-flex items-center gap-2 font-inter font-semibold text-[15px] uppercase tracking-[0.12em] min-h-[44px]"
               >
                 RSVP: Call Us →
               </PhoneLink>

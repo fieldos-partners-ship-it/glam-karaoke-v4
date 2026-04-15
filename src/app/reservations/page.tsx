@@ -33,7 +33,7 @@ export default function ReservationsPage() {
           <div className="text-center">
             <PhoneLink
               source="reservations-or-split"
-              className="font-clash font-semibold text-[28px] md:text-[36px] min-h-[56px] inline-flex items-center"
+              className="font-inter font-semibold text-[28px] md:text-[36px] tracking-[0.05em] min-h-[56px] inline-flex items-center"
             />
           </div>
         </div>

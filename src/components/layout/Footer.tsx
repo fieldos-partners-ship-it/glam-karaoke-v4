@@ -3,6 +3,7 @@
 // GC-3: uses PhoneLink for all phone links
 
 import Link from 'next/link'
+import Image from 'next/image'
 import PhoneLink from '@/components/ui/PhoneLink'
 
 // Inline SVG social icons — lucide-react does not export brand icons
@@ -43,9 +44,16 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
           {/* Brand + Contact */}
           <div>
-            <h2 className="font-clash font-semibold text-xl text-soft-white tracking-wider mb-4">
-              GLAM KARAOKE
-            </h2>
+            <Link href="/" className="inline-flex items-center mb-5" aria-label="Glam Karaoke — Home">
+              <Image
+                src="/brand/glam-karaoke-logo.png"
+                alt="Glam Karaoke"
+                width={802}
+                height={554}
+                sizes="(min-width: 768px) 180px, 150px"
+                className="h-24 w-auto md:h-28"
+              />
+            </Link>
             <address className="not-italic text-cool-mist text-sm font-inter leading-relaxed mb-4">
               {businessInfo.addressStreet}<br />
               {businessInfo.addressCity}, {businessInfo.addressState} {businessInfo.addressZip}
@@ -83,7 +91,7 @@ export default function Footer() {
 
           {/* Hours */}
           <div>
-            <h3 className="font-clash font-semibold text-base text-soft-white mb-4 tracking-wide">
+            <h3 className="font-inter font-semibold text-sm text-soft-white mb-4 tracking-[0.18em] uppercase">
               HOURS
             </h3>
             <dl className="space-y-2">
@@ -101,7 +109,7 @@ export default function Footer() {
 
           {/* Navigation */}
           <div>
-            <h3 className="font-clash font-semibold text-base text-soft-white mb-4 tracking-wide">
+            <h3 className="font-inter font-semibold text-sm text-soft-white mb-4 tracking-[0.18em] uppercase">
               EXPLORE
             </h3>
             <nav aria-label="Footer navigation">
@@ -110,7 +118,7 @@ export default function Footer() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-cool-mist text-sm font-inter hover:text-soft-white transition-colors duration-150"
+                      className="text-cool-mist text-sm font-inter tracking-[0.03em] hover:text-soft-white transition-colors duration-150"
                     >
                       {link.label}
                     </Link>

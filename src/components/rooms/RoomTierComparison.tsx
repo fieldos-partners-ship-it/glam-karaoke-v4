@@ -42,7 +42,7 @@ export default function RoomTierComparison() {
               variants={cardVariants}
               className={`relative rounded-2xl overflow-hidden bg-glass-surface border flex flex-col
                 ${room.mostPopular
-                  ? 'border-neon-teal shadow-[0_0_0_2px_#00D9C4,0_12px_40px_rgba(0,0,0,0.5)] md:scale-[1.02]'
+                  ? 'border-neon-teal shadow-[0_0_0_2px_#E51997,0_12px_40px_rgba(0,0,0,0.5)] md:scale-[1.02]'
                   : 'border-white/[0.06] shadow-[0_4px_24px_rgba(0,0,0,0.4)]'
                 }`}
             >

@@ -8,15 +8,15 @@ export default function PrivateEventsCTABand() {
     <section className="bg-electric-violet py-20" aria-label="Book a private event at Glam Karaoke">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Eyebrow */}
-        <p className="text-soft-white/60 font-inter font-semibold text-[11px] tracking-[0.12em] uppercase mb-4">
+        <p className="font-inter text-[12px] font-semibold uppercase tracking-[0.2em] text-soft-white/72 mb-4">
           PRIVATE EVENTS
         </p>
 
-        <h2 className="font-clash font-bold text-[30px] md:text-[48px] text-soft-white leading-[1.1] tracking-[-0.02em] mb-4">
+        <h2 className="menu-heading mb-4 text-[38px] md:text-[58px]">
           Book the Party Suite
         </h2>
 
-        <p className="font-inter text-soft-white/80 text-base md:text-lg max-w-xl mx-auto mb-8 leading-relaxed">
+        <p className="menu-subtext-bright mx-auto mb-8 max-w-xl text-[19px] md:text-[22px]">
           Up to 20 guests. Starting from $70/hr. DJ-ready. Full bar access.
           Perfect for birthdays, bachelorettes, and corporate outings.
         </p>

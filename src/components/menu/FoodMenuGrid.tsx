@@ -12,7 +12,7 @@ export default function FoodMenuGrid() {
           <div key={category.id} className="mb-16 last:mb-0">
             {/* Category header */}
             <div className="flex items-center gap-4 mb-8">
-              <h2 className="font-clash font-semibold text-[26px] md:text-[32px] text-soft-white">
+              <h2 className="font-clash font-bold text-[26px] md:text-[32px] text-soft-white tracking-[-0.02em]">
                 {category.name}
               </h2>
               <div className="flex-1 h-px bg-white/10" aria-hidden="true" />
@@ -28,14 +28,14 @@ export default function FoodMenuGrid() {
                     className="flex items-start justify-between gap-4 py-4 border-b border-white/[0.06] last:border-0"
                   >
                     <div className="flex-1">
-                      <h3 className="font-clash font-semibold text-[18px] text-soft-white mb-1">
+                      <h3 className="font-inter font-semibold text-[18px] text-soft-white mb-1 tracking-[0.03em]">
                         {item.name}
                       </h3>
                       <p className="font-inter text-cool-mist text-sm leading-relaxed">
                         {item.description}
                       </p>
                     </div>
-                    <div className="flex-shrink-0 text-neon-teal font-inter font-semibold text-base">
+                    <div className="flex-shrink-0 text-neon-teal font-inter font-semibold text-base tracking-[0.04em]">
                       {item.price !== null ? `$${item.price}` : ''}
                     </div>
                   </div>
