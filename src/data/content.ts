@@ -136,41 +136,225 @@ export const rooms = [
   },
 ]
 
-export const menuCategories = [
-  {
-    id: 'shareables',
-    name: 'Shareables',
-    items: [
-      { name: 'Bulgogi Nachos', price: 16, description: 'Korean-marinated beef over crispy chips with pickled jalapeños' },
-      { name: 'Kimchi Fried Rice', price: 14, description: 'Classic fermented kimchi with egg, scallions, sesame oil' },
-      { name: 'Crispy Chicken Wings', price: 15, description: 'Tossed in your choice of soy garlic, spicy, or sweet chili' },
-      { name: 'Tteok-bokki', price: 13, description: 'Spicy rice cakes in gochujang sauce — a Glam house staple' },
+export type MenuItem = {
+  name: string
+  price: string | null
+  description?: string
+  secondaryPrice?: string
+}
+
+export type MenuSection = {
+  id: string
+  name: string
+  description?: string
+  priceNote?: string
+  items: MenuItem[]
+  display?: 'list' | 'chips'
+  choicesTitle?: string
+  choices?: string[]
+}
+
+export const menuExperience = {
+  heroTitle: 'Glam Karaoke Menu.',
+  heroSupport: 'Korean bar food · soju, beer, wine, and cocktail board specials · happy hour 5–8 PM',
+  foodSections: [
+    {
+      id: 'starters',
+      name: 'Starters',
+      description: 'Fried snacks, shareable bites, and late-night comfort food.',
+      items: [
+        { name: 'Mozzarella Cheese Sticks', price: '$10', description: '6 pieces' },
+        { name: 'Onion Rings', price: '$10' },
+        { name: 'Pork Dumplings', price: '$12', description: '6 pieces' },
+        { name: 'French Fries', price: '$10' },
+        { name: 'Truffle Fries', price: '$13' },
+        { name: 'Bacon Cheese Fries', price: '$15' },
+        { name: 'Chili Cheese Fries', price: '$15' },
+        { name: 'Tater Tots', price: '$10' },
+        { name: 'Truffle Tots', price: '$13' },
+        { name: 'Bulgogi Tots', price: '$15' },
+        { name: 'Bacon Cheese Tots', price: '$15' },
+        { name: 'Chili Cheese Tots', price: '$15' },
+        { name: 'Fried Calamari', price: '$20' },
+        { name: 'Bulgogi Quesadilla', price: '$16' },
+      ],
+    },
+    {
+      id: 'snacks',
+      name: 'Snacks',
+      description: 'Bar snacks built for another round.',
+      items: [
+        { name: 'Jwipo & Nuts', price: '$20' },
+        { name: 'Dried Squid & Nuts', price: '$27' },
+        { name: 'Bulgogi Nacho', price: '$23' },
+      ],
+    },
+    {
+      id: 'soups',
+      name: 'Soups',
+      description: 'Hot pots, tang, and quick noodle resets.',
+      items: [
+        { name: 'Budae Jjigae', price: '$20' },
+        { name: 'Odeng Tang', price: '$20' },
+        { name: 'Jjambbong Tang', price: '$20' },
+        { name: 'Ramyun', price: '$10' },
+        { name: 'Bulgogi Ramyun', price: '$12' },
+      ],
+    },
+    {
+      id: 'entrees',
+      name: 'Entrees',
+      description: 'The bigger plates for long sessions and hungry groups.',
+      items: [
+        { name: 'Bulgogi Taco', price: '$15' },
+        { name: 'Bulgogi Sliders', price: '$15' },
+        { name: 'Tteok Bokki', price: '$20' },
+        { name: 'Cheese Tteok Bokki', price: '$23' },
+        { name: 'Kimchi Fried Rice', price: '$15' },
+        { name: 'Bulgogi Over Rice', price: '$15' },
+        { name: 'Spicy Stir Fried Squid Over Rice', price: '$16' },
+        { name: 'Tofu Kimchi W/ Pork', price: '$30' },
+        { name: 'Ojinguh Somyun', price: '$35' },
+        { name: 'Shrimp Alfredo Pasta', price: '$22' },
+        { name: 'Seafood Pancake', price: '$20' },
+        { name: 'Kimchi Pancake', price: '$18' },
+      ],
+    },
+    {
+      id: 'wings',
+      name: 'Wings',
+      description: 'One order comes with celery and carrots.',
+      items: [
+        { name: 'House Wings', price: '$20', description: 'Choose your flavor and run the next round.' },
+      ],
+      choicesTitle: 'Flavors',
+      choices: ['Mild Buffalo', 'Spicy', 'Super Spicy', 'BBQ', 'Spicy BBQ', 'Honey BBQ'],
+    },
+  ] satisfies MenuSection[],
+  drinkSections: [
+    {
+      id: 'soju',
+      name: 'Soju',
+      description: 'Bottle lineup from the menu board.',
+      priceNote: '$20 each',
+      display: 'chips',
+      items: [
+        { name: 'Jinro Is Back', price: null },
+        { name: 'Jinro Sugar Free', price: null },
+        { name: 'Chumchurum', price: null },
+        { name: 'Saero Zero Sugar', price: null },
+        { name: 'Green Grape', price: null },
+        { name: 'Grapefruit', price: null },
+        { name: 'Plum', price: null },
+        { name: 'Strawberry', price: null },
+        { name: 'Apple Mango', price: null },
+        { name: 'Green Apple', price: null },
+        { name: 'Yogurt', price: null },
+        { name: 'Peach on the Beach', price: null },
+        { name: 'Lemonster', price: null },
+        { name: 'Honey Do', price: null },
+        { name: 'Podo', price: null },
+      ],
+    },
+    {
+      id: 'draft-beers',
+      name: 'Draft Beers',
+      description: 'By the glass or by the pitcher.',
+      items: [
+        { name: 'Miller Lite', price: '$7', secondaryPrice: 'Pitcher $21' },
+        { name: 'Sapporo', price: '$8', secondaryPrice: 'Pitcher $23' },
+        { name: 'Allagash White', price: '$9', secondaryPrice: 'Pitcher $24' },
+        { name: 'Lagunitas IPA', price: '$9', secondaryPrice: 'Pitcher $24' },
+      ],
+    },
+    {
+      id: 'wines',
+      name: 'Wines',
+      items: [
+        { name: 'Cabernet', price: '$8' },
+        { name: 'Chardonnay', price: '$8' },
+        { name: 'Prosecco', price: '$10' },
+      ],
+    },
+    {
+      id: 'beers',
+      name: 'Beers',
+      items: [
+        { name: 'Coors Light', price: '$7' },
+        { name: 'Asahi', price: '$7' },
+        { name: 'Heineken', price: '$7' },
+        { name: 'Heineken 0.0%', price: '$7' },
+        { name: 'Corona Extra', price: '$7' },
+        { name: 'Modelo', price: '$8' },
+        { name: 'Guinness', price: '$10' },
+        { name: 'Terra 500ml', price: '$14' },
+        { name: 'Sapporo 22oz', price: '$12' },
+      ],
+    },
+    {
+      id: 'seltzer-cider',
+      name: 'Seltzer & Cider',
+      items: [
+        { name: 'Truly Wildberry', price: '$7' },
+        { name: 'Angry Orchard', price: '$7' },
+        { name: 'Surfside Strawberry Lemonade', price: '$8' },
+        { name: 'Surfside Green Tea', price: '$8' },
+        { name: 'Suncruiser Iced Tea', price: '$8' },
+        { name: 'White Claw Lime', price: '$8' },
+        { name: 'Long Drink', price: '$7' },
+      ],
+    },
+    {
+      id: 'yogurt-soju-pitcher',
+      name: 'Yogurt Soju Pitcher',
+      items: [
+        { name: 'Yogurt Flavor', price: '$25' },
+        { name: 'Strawberry Flavor', price: '$27' },
+        { name: 'Mango Flavor', price: '$27' },
+        { name: 'Peach Flavor', price: '$27' },
+      ],
+    },
+  ] satisfies MenuSection[],
+  cocktailSpecials: [
+    {
+      id: 'cocktail-specials',
+      name: 'Cocktail Specials',
+      description: 'Visible house specials from the current cocktail board.',
+      items: [
+        {
+          name: 'Pinkberry Starburst Shooter',
+          price: '$8',
+          description: 'Bacardi Dragonberry, orange liqueur, cranberry juice, sweet & sour.',
+        },
+        {
+          name: 'Glam Highball',
+          price: '$12',
+          description: 'Choose strawberry, lemon, peach, or grapefruit with vodka seltzer, Jim Beam, and soda water.',
+        },
+        {
+          name: 'Why So Blue... Smash?',
+          price: '$14',
+          description: 'Deep Eddy lemon vodka, fresh blueberries, simple syrup, lemon juice, club soda, and a lemon twist.',
+        },
+        {
+          name: 'Appletini',
+          price: '$14',
+          description: 'Vodka, sour apple pucker, lime juice, and simple syrup.',
+        },
+      ],
+    },
+  ] satisfies MenuSection[],
+  happyHour: {
+    eyebrow: 'HAPPY HOUR',
+    headline: 'Early drinks before the chorus hits.',
+    description: 'Happy hour runs Sunday through Thursday from 5 to 8 PM and applies to select drinks.',
+    notes: [
+      'Ask the team which drinks are included that night.',
+      'Walk in early, claim a table, and turn the room reservation into a full night out.',
+      'The full drink lineup stays available in the Drinks tab.',
     ],
-    image: '/images/detail-5.jpg',
   },
-  {
-    id: 'mains',
-    name: 'Mains',
-    items: [
-      { name: 'Bulgogi Bowl', price: 18, description: 'Marinated beef over steamed rice with pickled vegetables' },
-      { name: 'Spicy Pork Bowl', price: 17, description: 'Gochujang-glazed pork over rice, topped with sesame and scallions' },
-      { name: 'Chicken Karaage', price: 17, description: 'Japanese-style fried chicken with house mayo and lemon' },
-    ],
-    image: '/images/detail-6.jpg',
-  },
-  {
-    id: 'drinks',
-    name: 'Drinks',
-    items: [
-      { name: 'Soju Collection', price: null, description: '16 flavors — original, yogurt, citrus, peach, grapefruit, and more' },
-      { name: 'Yogurt Soju Pitcher', price: 35, description: 'The crowd favorite — smooth, slightly sweet, endlessly drinkable' },
-      { name: 'Craft Cocktails', price: 14, description: "Rotating seasonal menu — ask your server for tonight's specials" },
-      { name: 'Draft Beer', price: 8, description: 'Korean and domestic selections on draft' },
-      { name: 'Wine', price: 10, description: 'House red and white by the glass' },
-    ],
-    image: '/images/detail-7.jpg',
-  },
-]
+}
 
 export const featuredReviews = [
   {

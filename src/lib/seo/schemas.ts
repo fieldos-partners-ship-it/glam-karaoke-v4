@@ -89,7 +89,7 @@ export function buildReservationSchema() {
       postalCode: businessInfo.addressZip,
       addressCountry: 'US',
     },
-    description: 'Book a private karaoke room at Glam Karaoke. Duo from $40/hr, Group from $50/hr, Party Suite from $70/hr.',
+    description: 'Call Glam Karaoke to reserve a private karaoke room. Duo from $40/hr, Group from $50/hr, Party Suite from $70/hr.',
     offers: [
       {
         '@type': 'Offer',

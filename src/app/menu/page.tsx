@@ -4,15 +4,12 @@
 
 import type { Metadata } from 'next'
 import { siteUrl } from '@/data/content'
-import TypographicHero from '@/components/menu/TypographicHero'
-import FoodMenuGrid from '@/components/menu/FoodMenuGrid'
-import DrinkHorizontalScroll from '@/components/menu/DrinkHorizontalScroll'
-import HappyHourBand from '@/components/menu/HappyHourBand'
+import MenuExperience from '@/components/menu/MenuExperience'
 import PhoneLink from '@/components/ui/PhoneLink'
 
 export const metadata: Metadata = {
   title: 'Menu — Korean-American Kitchen & Bar | Glam Karaoke',
-  description: 'Korean-American small plates, bulgogi nachos, kimchi fried rice, 16 soju flavors, and craft cocktails. Happy hour 5–8 PM Sun–Thu.',
+  description: 'Food, drinks, and cocktail board specials at Glam Karaoke in Annandale. Korean bar food, soju, beer, wine, and happy hour Sunday through Thursday.',
   alternates: {
     canonical: `${siteUrl}/menu`,
   },
@@ -21,10 +18,7 @@ export const metadata: Metadata = {
 export default function MenuPage() {
   return (
     <>
-      <TypographicHero />
-      <FoodMenuGrid />
-      <DrinkHorizontalScroll />
-      <HappyHourBand />
+      <MenuExperience />
 
       {/* Menu CTA */}
       <section className="bg-stage-noir py-16 border-t border-white/[0.06]" aria-label="Contact us">

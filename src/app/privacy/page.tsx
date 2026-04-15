@@ -25,14 +25,14 @@ export default function PrivacyPage() {
             <section>
               <h2 className="font-clash font-semibold text-xl text-soft-white mb-3">1. Information We Collect</h2>
               <p>
-                We collect information you voluntarily provide when you submit a reservation or inquiry form on our website — including your name, phone number, email address, preferred date, and group size. We do not collect payment information through this website.
+                We collect information you voluntarily provide when you contact us directly or submit an inquiry form made available on our website — such as your name, phone number, email address, preferred date, and group size. We do not collect payment information through this website.
               </p>
             </section>
 
             <section>
               <h2 className="font-clash font-semibold text-xl text-soft-white mb-3">2. How We Use Your Information</h2>
               <p>
-                Information you provide is used solely to respond to your reservation request and communicate about your booking. We do not sell, rent, or share your personal information with third parties for marketing purposes.
+                Information you provide is used solely to respond to your inquiry, reservation call, or booking-related question. We do not sell, rent, or share your personal information with third parties for marketing purposes.
               </p>
             </section>
 
@@ -62,14 +62,14 @@ export default function PrivacyPage() {
             <section>
               <h2 className="font-clash font-semibold text-xl text-soft-white mb-3">5. Third-Party Services</h2>
               <p>
-                Our reservation forms may use a third-party form processing service (Formspree). By submitting a form, you agree to that service&apos;s privacy policy. We do not control how third-party services process data once it is transmitted.
+                If we enable a third-party form processing service for inquiry forms, submissions will also be subject to that provider&apos;s privacy policy. We will update this page when such a service is actively used.
               </p>
             </section>
 
             <section>
               <h2 className="font-clash font-semibold text-xl text-soft-white mb-3">6. Data Retention</h2>
               <p>
-                Reservation inquiries submitted through this site are retained only as long as necessary to fulfill your request and for a reasonable follow-up period.
+                Information you share through direct contact or inquiry submissions is retained only as long as necessary to fulfill your request and for a reasonable follow-up period.
               </p>
             </section>
 

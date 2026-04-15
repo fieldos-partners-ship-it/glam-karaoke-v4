@@ -24,8 +24,8 @@ export default function RoomsPage() {
       <PageHero
         eyebrow="PRIVATE KARAOKE ROOMS"
         title="Find Your Room. Bring Your People."
-        backgroundImage="/images/interior-2.jpg"
-        backgroundAlt="Inside Glam Karaoke — private karaoke rooms with professional lighting and sound"
+        backgroundImage="/images/photo-10.jpg"
+        backgroundAlt="A private karaoke room at Glam Karaoke with lounge seating, table space, and club lighting"
         height="h-[55vh]"
       />
       <RoomTierComparison />
