@@ -58,8 +58,8 @@ export default function VideoLoopHero() {
         aria-hidden="true"
       />
 
-      {/* Eyebrow — lifted into the open sky area for stronger contrast and separation */}
-      <div className="absolute inset-x-0 top-28 z-10 px-4 text-center md:top-36 lg:top-40">
+      {/* Eyebrow — hidden on mobile, shown on desktop in the open sky area */}
+      <div className="hidden md:block absolute inset-x-0 top-28 z-10 px-4 text-center md:top-36 lg:top-40">
         <p className="font-inter text-[14px] font-bold uppercase tracking-[0.24em] text-neon-teal [text-shadow:0_3px_18px_rgba(0,0,0,0.45)] md:text-[16px]">
           Annandale, VA · 12 Private Rooms
         </p>

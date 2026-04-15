@@ -1,0 +1,248 @@
+{
+  "images_analyzed": 12,
+  "color_palette": {
+    "primary": {
+      "hex": "#5a2610",
+      "rgb": {
+        "r": 90,
+        "g": 38,
+        "b": 16
+      },
+      "name": "dark orange",
+      "frequency": 7876,
+      "type": "chromatic"
+    },
+    "secondary": {
+      "hex": "#6490d9",
+      "rgb": {
+        "r": 100,
+        "g": 144,
+        "b": 217
+      },
+      "name": "blue",
+      "frequency": 7218,
+      "type": "chromatic"
+    },
+    "accent": {
+      "hex": "#1017c9",
+      "rgb": {
+        "r": 16,
+        "g": 23,
+        "b": 201
+      },
+      "name": "vivid blue",
+      "frequency": 7039,
+      "type": "chromatic"
+    },
+    "neutral_dark": {
+      "hex": "#131014",
+      "rgb": {
+        "r": 19,
+        "g": 16,
+        "b": 20
+      },
+      "name": "neutral dark",
+      "frequency": 66916,
+      "type": "neutral_dark"
+    },
+    "neutral_light": {
+      "hex": "#d0c7bb",
+      "rgb": {
+        "r": 208,
+        "g": 199,
+        "b": 187
+      },
+      "name": "neutral light",
+      "frequency": 9196,
+      "type": "neutral_light"
+    }
+  },
+  "all_extracted_colors": [
+    {
+      "hex": "#5a2610",
+      "rgb": {
+        "r": 90,
+        "g": 38,
+        "b": 16
+      },
+      "name": "dark orange",
+      "frequency": 7876,
+      "type": "chromatic"
+    },
+    {
+      "hex": "#6490d9",
+      "rgb": {
+        "r": 100,
+        "g": 144,
+        "b": 217
+      },
+      "name": "blue",
+      "frequency": 7218,
+      "type": "chromatic"
+    },
+    {
+      "hex": "#1017c9",
+      "rgb": {
+        "r": 16,
+        "g": 23,
+        "b": 201
+      },
+      "name": "vivid blue",
+      "frequency": 7039,
+      "type": "chromatic"
+    },
+    {
+      "hex": "#801057",
+      "rgb": {
+        "r": 128,
+        "g": 16,
+        "b": 87
+      },
+      "name": "dark magenta",
+      "frequency": 6870,
+      "type": "chromatic"
+    },
+    {
+      "hex": "#131014",
+      "rgb": {
+        "r": 19,
+        "g": 16,
+        "b": 20
+      },
+      "name": "neutral dark",
+      "frequency": 66916,
+      "type": "neutral_dark"
+    },
+    {
+      "hex": "#d0c7bb",
+      "rgb": {
+        "r": 208,
+        "g": 199,
+        "b": 187
+      },
+      "name": "neutral light",
+      "frequency": 9196,
+      "type": "neutral_light"
+    }
+  ],
+  "visual_style": {
+    "brightness": "moody",
+    "saturation": "moderate",
+    "contrast": "moderate contrast"
+  },
+  "metrics": {
+    "avg_brightness": 81.6,
+    "avg_saturation": 47.5,
+    "avg_contrast": 50.7
+  },
+  "image_details": [
+    {
+      "path": "public/images/detail-5.jpg",
+      "dimensions": {
+        "width": 897,
+        "height": 897
+      },
+      "brightness": 123.4,
+      "saturation": 53.9
+    },
+    {
+      "path": "public/images/photo-9.jpg",
+      "dimensions": {
+        "width": 1600,
+        "height": 2125
+      },
+      "brightness": 55.7,
+      "saturation": 20.8
+    },
+    {
+      "path": "public/images/detail-6.jpg",
+      "dimensions": {
+        "width": 1600,
+        "height": 1200
+      },
+      "brightness": 73.5,
+      "saturation": 61.4
+    },
+    {
+      "path": "public/images/detail-7.jpg",
+      "dimensions": {
+        "width": 1600,
+        "height": 1200
+      },
+      "brightness": 70.4,
+      "saturation": 71.9
+    },
+    {
+      "path": "public/images/photo-8.jpg",
+      "dimensions": {
+        "width": 1600,
+        "height": 1200
+      },
+      "brightness": 90.7,
+      "saturation": 38.6
+    },
+    {
+      "path": "public/images/photo-10.jpg",
+      "dimensions": {
+        "width": 1600,
+        "height": 1200
+      },
+      "brightness": 75.2,
+      "saturation": 42.5
+    },
+    {
+      "path": "public/images/ambiance-4.jpg",
+      "dimensions": {
+        "width": 1600,
+        "height": 1200
+      },
+      "brightness": 91.7,
+      "saturation": 45.1
+    },
+    {
+      "path": "public/images/Logo PNG.png",
+      "dimensions": {
+        "width": 802,
+        "height": 554
+      },
+      "brightness": 77.0,
+      "saturation": 55.1
+    },
+    {
+      "path": "public/images/ambiance-3.jpg",
+      "dimensions": {
+        "width": 1600,
+        "height": 1200
+      },
+      "brightness": 76.7,
+      "saturation": 82.9
+    },
+    {
+      "path": "public/images/logo.png",
+      "dimensions": {
+        "width": 2390,
+        "height": 1792
+      },
+      "brightness": 36.0,
+      "saturation": 18.2
+    },
+    {
+      "path": "public/images/interior-2.jpg",
+      "dimensions": {
+        "width": 1600,
+        "height": 2133
+      },
+      "brightness": 71.6,
+      "saturation": 46.7
+    },
+    {
+      "path": "public/images/storefront-1.jpg",
+      "dimensions": {
+        "width": 1600,
+        "height": 1200
+      },
+      "brightness": 136.7,
+      "saturation": 32.9
+    }
+  ]
+}

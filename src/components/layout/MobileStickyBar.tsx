@@ -17,7 +17,7 @@ export default function MobileStickyBar() {
       {/* GC-3: Full-surface phone link tap target */}
       <PhoneLink
         source="mobile-sticky-bar"
-        className="flex h-full w-full items-center justify-center gap-2 font-inter text-sm font-semibold text-logo-noir hover:text-logo-noir"
+        className="flex h-full w-full items-center justify-center gap-2 font-inter text-sm font-semibold !text-white hover:!text-white"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

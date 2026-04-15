@@ -129,16 +129,6 @@ export default function Header() {
           aria-label="Navigation menu"
           aria-modal="true"
         >
-          <Link href="/" className="flex items-center" aria-label="Glam Karaoke — Home">
-            <Image
-              src="/brand/glam-karaoke-logo.png"
-              alt="Glam Karaoke"
-              width={802}
-              height={554}
-              sizes="180px"
-              className="h-24 w-auto"
-            />
-          </Link>
           <nav className="flex flex-col items-center gap-6" aria-label="Mobile navigation">
             {navLinks.map((link) => (
               <Link
