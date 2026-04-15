@@ -2,7 +2,7 @@
 // All import from content.ts — never hold their own business data
 // AP-013: All telephone fields use businessInfo.phoneTel (E.164 format: +17039425526)
 
-import { businessInfo, reviewData, siteUrl } from '@/data/content'
+import { businessInfo, reviewData, siteUrl, faqItems } from '@/data/content'
 
 export function buildBarOrClubSchema() {
   return {
@@ -113,6 +113,49 @@ export function buildReservationSchema() {
         description: 'Largest private karaoke room for up to 20 guests. From $70/hr.',
       },
     ],
+  }
+}
+
+// P1-04 SEO: FAQPage schema for /rooms — enables FAQ rich results in Google Search
+// Data sourced from faqItems in content.ts to stay in sync with FAQAccordion component
+export function buildFAQSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqItems.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    })),
+  }
+}
+
+// P1-01 SEO: Contact page LocalBusiness schema — crawlable NAP in one place
+export function buildContactSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    name: businessInfo.name,
+    url: `${siteUrl}/contact`,
+    telephone: businessInfo.phoneTel,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: businessInfo.addressStreet,
+      addressLocality: businessInfo.addressCity,
+      addressRegion: businessInfo.addressState,
+      postalCode: businessInfo.addressZip,
+      addressCountry: 'US',
+    },
+    openingHoursSpecification: [
+      { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday'], opens: '17:00', closes: '02:00' },
+      { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Friday', opens: '17:00', closes: '03:00' },
+      { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Saturday', opens: '15:00', closes: '03:00' },
+      { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Sunday', opens: '15:00', closes: '02:00' },
+    ],
+    hasMap: `https://www.google.com/maps/place/?q=place_id:${businessInfo.googlePlaceId}`,
   }
 }
 

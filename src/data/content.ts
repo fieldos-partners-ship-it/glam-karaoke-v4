@@ -155,7 +155,8 @@ export type MenuSection = {
 }
 
 export const menuExperience = {
-  heroTitle: 'Glam Karaoke Menu.',
+  // P2-05 SEO / P3-02 conversion: location keyword + cuisine specificity added to H1
+  heroTitle: 'Glam Karaoke Kitchen & Bar — Annandale, VA',
   heroSupport: 'Korean bar food · soju, beer, wine, and cocktail board specials · happy hour 5–8 PM',
   foodSections: [
     {
@@ -376,14 +377,16 @@ export const featuredReviews = [
     rating: 5,
     text: "Couldn't get enough. The bulgogi nachos and kimchi fried rice are a must. Great for big groups and the parking is well-lit and safe. Like a night out without the crowd watching you.",
     source: 'Google',
-    contexts: ['home', 'groups'],
+    // P2-11: Parking trust signal — surface on /rooms and /reservations where access concern is most active
+    contexts: ['home', 'groups', 'rooms', 'reservations'],
   },
   {
     name: 'Alyssa Kim',
     rating: 5,
     text: 'We booked the Party Suite for a birthday and it felt effortless from the first call. The room looked incredible, the staff stayed on top of food and drinks, and everyone kept asking when we can do it again.',
     source: 'Google',
-    contexts: ['home', 'groups'],
+    // P2-11: Best objection-handler for phone reservation flow — surface on /reservations
+    contexts: ['home', 'groups', 'reservations'],
   },
   {
     name: 'Daniel Cho',
@@ -431,6 +434,46 @@ export const timeline = [
   { year: '2023–2024', event: '250 Google reviews. 4.2 stars. Customers call it "the best karaoke bar in the whole DMV."' },
   { year: 'February 2025', event: 'Northern Virginia Magazine: "Stands out with its 12 private rooms."' },
   { year: '2026', event: 'Still here. Still the only Annandale venue with a live main stage and a full kitchen.' },
+]
+
+// GC-1: FAQ data exported here so both FAQAccordion component and FAQPage schema share source
+// P1-04 SEO: adding parking + session-length FAQs for rich result coverage
+export const faqItems = [
+  {
+    id: 'walk-ins',
+    question: 'Do you accept walk-ins?',
+    answer: 'Yes — walk-ins are always welcome. However, rooms fill fast on Fridays and Saturdays, so we strongly suggest calling ahead to reserve your room, especially for groups of 5 or more.',
+  },
+  {
+    id: 'byob',
+    question: 'Is Glam Karaoke BYOB?',
+    answer: 'No. Glam Karaoke has a full bar with craft cocktails, 16 soju flavors, draft beer, and wine. Outside alcohol is not permitted. Happy hour runs 5–8 PM Sunday through Thursday.',
+  },
+  {
+    id: 'song-selection',
+    question: 'How does song selection work?',
+    answer: 'Every room has a dual karaoke system — YouTube for the latest songs and a traditional Korean karaoke system for a massive library of classics. An iPad is provided for easy browsing and song queuing. Staff will walk you through it when you arrive.',
+  },
+  {
+    id: 'food-ordering',
+    question: 'Can we order food in the room?',
+    answer: "Yes. Our Korean-American kitchen is available throughout your session. Order through your room's service — no need to leave. Bulgogi nachos and kimchi fried rice are crowd favorites.",
+  },
+  {
+    id: 'minimum',
+    question: 'Is there a minimum group size or time?',
+    answer: "There's no strict minimum group size. The Duo Room comfortably fits 2–4 guests, the Group Room fits 5–10, and the Party Suite fits up to 20. Room rental is by the hour. Call us for current minimums on weekend nights.",
+  },
+  {
+    id: 'parking',
+    question: 'Is there parking at Glam Karaoke?',
+    answer: 'Yes — Glam Karaoke has free, well-lit parking on-site. Multiple customers specifically mention the parking as a highlight, especially for late-night visits.',
+  },
+  {
+    id: 'session-length',
+    question: 'How long are room sessions?',
+    answer: 'Room rental is by the hour with no set minimum. Most groups book 2–3 hours. Friday and Saturday nights are most in-demand — calling ahead is strongly recommended to secure your slot.',
+  },
 ]
 
 // GC-4: GA4 gate — set real ID before delivery

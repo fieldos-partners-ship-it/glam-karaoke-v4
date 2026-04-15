@@ -9,7 +9,7 @@ import { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, PhoneCall } from 'lucide-react'
 import CTAButton from '@/components/ui/CTAButton'
 import PhoneLink from '@/components/ui/PhoneLink'
 
@@ -107,6 +107,15 @@ export default function Header() {
                 Book a Room
               </CTAButton>
             </nav>
+
+            {/* P1-02: Mobile "Call" pill — visible between logo and hamburger on mobile only */}
+            <PhoneLink
+              source="header-mobile"
+              className="md:hidden flex items-center gap-1.5 min-h-[44px] px-3 rounded-full border border-neon-teal/40 bg-neon-teal/10 font-inter font-semibold text-[13px] text-neon-teal"
+            >
+              <PhoneCall className="h-3.5 w-3.5" aria-hidden="true" />
+              Call
+            </PhoneLink>
 
             {/* Mobile hamburger */}
             <button

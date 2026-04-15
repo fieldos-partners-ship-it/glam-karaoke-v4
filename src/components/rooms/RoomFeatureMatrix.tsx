@@ -84,13 +84,15 @@ export default function RoomFeatureMatrix() {
           </table>
         </div>
 
-        {/* Mobile: stacked comparison cards */}
+        {/* Mobile: stacked cards — Most Popular gets glow shadow to translate desktop scale elevation */}
         <div className="md:hidden space-y-6">
           {rooms.map((room) => (
             <div
               key={room.id}
               className={`rounded-2xl border p-6 ${
-                room.mostPopular ? 'border-neon-teal bg-glass-surface' : 'border-white/[0.06] bg-glass-surface/60'
+                room.mostPopular
+                  ? 'border-neon-teal bg-glass-surface shadow-[0_0_0_1px_#E51997,0_8px_24px_rgba(229,25,151,0.18)]'
+                  : 'border-white/[0.06] bg-glass-surface/60'
               }`}
             >
               <div className="flex items-center justify-between mb-4">

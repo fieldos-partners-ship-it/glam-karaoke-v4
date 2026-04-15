@@ -3,7 +3,7 @@
 // AP-021: OG image configured in metadata
 // AP-043: globals.css imported here
 
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Big_Shoulders_Text, League_Spartan } from 'next/font/google'
 import Script from 'next/script'
 import './globals.css'
@@ -28,6 +28,14 @@ const bigShouldersText = Big_Shoulders_Text({
   variable: '--font-inter',
   display: 'swap',
 })
+
+// MOBILE-07: Explicit viewport export required for Next.js 14 App Router to inject
+// <meta name="viewport"> — without this, site renders as desktop-width on mobile
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5, // allow user zoom for accessibility
+}
 
 // AP-021: OG image configured
 // AP-022: Root title/description as fallback template

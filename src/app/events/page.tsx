@@ -16,6 +16,19 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${siteUrl}/events`,
   },
+  // P2-01: Per-page OG override
+  openGraph: {
+    title: 'DJ Nights at Glam Karaoke — Every Friday, Annandale VA',
+    description: 'DJ @loxs1ck on the main stage every Friday. Doors open at 5 PM, DJ at 9 PM. Private karaoke rooms available all night.',
+    url: `${siteUrl}/events`,
+    images: [{ url: '/images/ambiance-4.jpg', width: 1200, height: 630, alt: 'DJ night at Glam Karaoke main stage Annandale VA' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'DJ Nights at Glam Karaoke — Every Friday, Annandale VA',
+    description: 'DJ @loxs1ck on the main stage every Friday. Doors open at 5 PM, DJ at 9 PM. Private karaoke rooms available all night.',
+    images: ['/images/ambiance-4.jpg'],
+  },
 }
 
 export default function EventsPage() {
@@ -32,11 +45,12 @@ export default function EventsPage() {
           <p className="font-inter text-soft-white/60 font-semibold text-[11px] tracking-[0.12em] uppercase mb-4">
             PRIVATE EVENTS
           </p>
+          {/* P2-07: Arrow removed from heading; copy carries emotion vs rhetorical question */}
           <h2 className="font-clash font-bold text-[30px] md:text-[44px] text-soft-white leading-[1.1] tracking-[-0.02em] mb-6">
-            Want the whole stage for your group? →
+            Your group. Your whole stage. One night.
           </h2>
           <CTAButton href="/private-events" variant="secondary" size="lg">
-            Book a Private Event
+            Plan Your Private Event →
           </CTAButton>
         </div>
       </section>

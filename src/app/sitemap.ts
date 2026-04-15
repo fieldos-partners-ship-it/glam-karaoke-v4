@@ -48,6 +48,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.9,
     },
+    // P1-01: /contact page added to sitemap
+    {
+      url: `${siteUrl}/contact`,
+      lastModified: now,
+      changeFrequency: 'yearly',
+      priority: 0.7,
+    },
     {
       url: `${siteUrl}/privacy`,
       lastModified: now,

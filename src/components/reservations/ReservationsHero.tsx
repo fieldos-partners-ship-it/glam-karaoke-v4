@@ -73,8 +73,9 @@ export default function ReservationsHero() {
           </div>
         </motion.div>
 
+        {/* min-h reduced on mobile so phone CTA stays above fold at 375px */}
         <motion.div
-          className="relative min-h-[500px] lg:min-h-[620px]"
+          className="relative min-h-[280px] sm:min-h-[400px] lg:min-h-[620px]"
           initial={reduceMotion ? undefined : { opacity: 0, scale: 0.96 }}
           animate={reduceMotion ? undefined : { opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, ease: 'easeOut', delay: 0.08 }}

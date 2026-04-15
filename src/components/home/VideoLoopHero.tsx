@@ -6,6 +6,7 @@
 // AP-005: First CTA is ghost-light "See Our Rooms" — NOT "Book Now"
 
 import Image from 'next/image'
+import { PhoneCall } from 'lucide-react'
 import PhoneLink from '@/components/ui/PhoneLink'
 import CTAButton from '@/components/ui/CTAButton'
 import { businessInfo, reviewData } from '@/data/content'
@@ -28,7 +29,7 @@ export default function VideoLoopHero() {
           loop
           playsInline
           preload="metadata"
-          poster="/images/storefront-1.jpg"
+          poster="/images/ambiance-3.jpg"
           className="absolute inset-0 w-full h-full object-cover"
           aria-hidden="true"
         >
@@ -36,10 +37,12 @@ export default function VideoLoopHero() {
         </video>
       ) : (
         // Static fallback until video is provided
+        // Using ambiance-3.jpg (sat 82.9, brightness 76.7) — moody interior with neon atmosphere
+        // storefront-1.jpg reserved for FoundingHero/About where exterior context is appropriate
         <div className="absolute inset-0">
           <Image
-            src="/images/storefront-1.jpg"
-            alt="Glam Karaoke storefront exterior in Annandale VA"
+            src="/images/ambiance-3.jpg"
+            alt="Glam Karaoke interior — neon-lit private karaoke rooms in Annandale VA"
             fill
             className="object-cover"
             priority
@@ -68,7 +71,8 @@ export default function VideoLoopHero() {
       {/* Hero content — anchored LOWER-CENTER */}
       <div className="relative z-10 w-full max-w-[820px] mx-auto px-4 pb-16 md:pb-28 text-center">
         {/* H1 — Clash Display 700 */}
-        <h1 className="menu-heading mb-5 text-[52px] sm:text-[64px] md:text-[88px]">
+        {/* GC-M: 42px on mobile to prevent overflow at 375px; scales up at sm: and md: */}
+        <h1 className="menu-heading mb-5 text-[42px] sm:text-[64px] md:text-[88px]">
           Your Night. Your Songs. Your Room.
         </h1>
 
@@ -108,10 +112,14 @@ export default function VideoLoopHero() {
             source="hero-desktop"
             className="hidden sm:flex items-center min-h-[48px] font-inter font-semibold text-[17px] tracking-[0.05em] text-cool-mist hover:text-soft-white"
           />
+          {/* P1-01: Mobile phone CTA with pill treatment — visual prominence for primary revenue action */}
           <PhoneLink
             source="hero-mobile"
-            className="flex sm:hidden items-center min-h-[48px] font-inter font-semibold text-[17px] tracking-[0.05em] text-cool-mist hover:text-soft-white"
-          />
+            className="flex sm:hidden items-center justify-center gap-2 min-h-[48px] px-6 rounded-full border border-white/40 bg-white/10 font-inter font-semibold text-[15px] tracking-[0.05em] text-soft-white hover:bg-white/20"
+          >
+            <PhoneCall className="h-4 w-4" aria-hidden="true" />
+            (703) 942-5526 — Reserve Now
+          </PhoneLink>
         </div>
       </div>
     </section>

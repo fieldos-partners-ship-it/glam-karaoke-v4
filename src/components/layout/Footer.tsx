@@ -33,6 +33,8 @@ const navLinks = [
   { label: 'Private Events', href: '/private-events' },
   { label: 'About', href: '/about' },
   { label: 'Reservations', href: '/reservations' },
+  // P1-01 SEO / P3-07: Contact page added to footer nav
+  { label: 'Contact', href: '/contact' },
 ]
 
 export default function Footer() {
@@ -59,9 +61,10 @@ export default function Footer() {
               {businessInfo.addressCity}, {businessInfo.addressState} {businessInfo.addressZip}
             </address>
             {/* GC-3: PhoneLink with footer source */}
+            {/* w-fit removed — tap target now spans full container width on mobile */}
             <PhoneLink
               source="footer"
-              className="text-neon-teal text-sm font-inter font-semibold block mb-2 hover:text-neon-teal-hover min-h-[44px] flex items-center w-fit"
+              className="text-neon-teal text-sm font-inter font-semibold block mb-2 hover:text-neon-teal-hover min-h-[44px] flex items-center"
             />
             {/* AP-018: Social links — Instagram linked, Facebook null-safe */}
             <div className="flex gap-4 mt-4">

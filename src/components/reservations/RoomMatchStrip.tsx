@@ -71,11 +71,16 @@ export default function RoomMatchStrip() {
                   <span>Private room, pro sound, club lighting, and tambourines ready to go.</span>
                 </div>
 
+                {/* P2-03: room-specific CTAs that carry urgency/commitment over generic "Call for X" */}
                 <PhoneLink
                   source={`reservations-room-${room.id}`}
                   className="inline-flex min-h-[48px] w-full items-center justify-center rounded-full border border-neon-teal bg-neon-teal px-6 py-3 font-clash text-[14px] font-bold uppercase tracking-[0.08em] !text-logo-noir shadow-[0_0_24px_rgba(229,25,151,0.28)] hover:border-neon-teal-hover hover:bg-neon-teal-hover hover:!text-logo-noir"
                 >
-                  Call for {room.name}
+                  {room.id === 'duo'
+                    ? 'Call to Claim Your Duo Room'
+                    : room.id === 'group'
+                    ? 'Call to Lock Your Group Room'
+                    : 'Call and Claim the Suite'}
                 </PhoneLink>
               </div>
             </article>

@@ -26,16 +26,16 @@ export default function EventsSplitHero() {
 
       {/* Right — event info */}
       <div className="w-full md:w-1/2 bg-glass-surface flex items-center">
-        <div className="px-8 md:px-12 lg:px-16 py-16">
+        <div className="px-6 md:px-12 lg:px-16 py-16">
           {/* Eyebrow */}
           <p className="menu-kicker mb-4">
             DJ NIGHTS + EVENTS
           </p>
 
-          {/* H1 */}
+          {/* P2-04 SEO: venue name + location keyword in H1 */}
           <h1 className="menu-heading mb-4 text-[48px] md:text-[68px]">
-            Every Friday.<br />
-            DJ @loxs1ck.
+            DJ Nights at Glam Karaoke —<br />
+            Every Friday.
           </h1>
 
           <p className="menu-subtext mb-6 text-[19px] md:text-[21px]">

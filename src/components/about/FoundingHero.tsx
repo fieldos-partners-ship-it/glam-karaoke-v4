@@ -32,9 +32,9 @@ export default function FoundingHero() {
           Est. March 18, 2022
         </p>
 
-        {/* Wordmark */}
+        {/* P2-03 SEO + P3-03 conversion: location keyword in H1, away from bare brand name */}
         <h1 className="menu-heading mb-4 text-[52px] md:text-[76px]">
-          Glam Karaoke
+          Annandale&apos;s Karaoke Destination
         </h1>
 
         <p className="menu-subtext-bright max-w-xl text-[19px] md:text-[22px]">

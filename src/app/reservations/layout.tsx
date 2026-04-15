@@ -3,7 +3,7 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
 import { siteUrl } from '@/data/content'
-import { buildReservationSchema } from '@/lib/seo/schemas'
+import { buildReservationSchema, buildBreadcrumbSchema } from '@/lib/seo/schemas'
 
 export const metadata: Metadata = {
   title: 'Book a Karaoke Room — Glam Karaoke Annandale VA',
@@ -15,6 +15,11 @@ export const metadata: Metadata = {
 
 export default function ReservationsLayout({ children }: { children: React.ReactNode }) {
   const reservationSchema = buildReservationSchema()
+  // P2-02: BreadcrumbList schema deployment
+  const breadcrumbSchema = buildBreadcrumbSchema([
+    { name: 'Home', url: siteUrl },
+    { name: 'Book a Room', url: `${siteUrl}/reservations` },
+  ])
 
   return (
     <>
@@ -22,6 +27,11 @@ export default function ReservationsLayout({ children }: { children: React.React
         id="schema-reservations"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(reservationSchema) }}
+      />
+      <Script
+        id="schema-reservations-breadcrumb"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       {children}
     </>

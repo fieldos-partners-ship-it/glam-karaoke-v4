@@ -17,8 +17,9 @@ const upcomingEvents = [
 ]
 
 export default function DJNightsTeaser() {
+  // bg-glass-surface restores Noir→Glass→Noir rhythm per UI_DIRECTION section rhythm strategy
   return (
-    <section className="bg-stage-noir py-20 overflow-hidden" aria-label="DJ nights and events">
+    <section className="bg-glass-surface py-20 overflow-hidden" aria-label="DJ nights and events">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section heading */}
         <motion.div

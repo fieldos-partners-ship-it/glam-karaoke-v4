@@ -36,11 +36,12 @@ export default function RoomTierComparison() {
           variants={containerVariants}
           className="grid grid-cols-1 md:grid-cols-3 gap-6"
         >
+          {/* group class on each card enables group-hover:scale-[1.03] on the image wrapper inside */}
           {rooms.map((room) => (
             <motion.div
               key={room.id}
               variants={cardVariants}
-              className={`relative rounded-2xl overflow-hidden bg-glass-surface border flex flex-col
+              className={`group relative rounded-2xl overflow-hidden bg-glass-surface border flex flex-col
                 ${room.mostPopular
                   ? 'border-neon-teal shadow-[0_0_0_2px_#E51997,0_12px_40px_rgba(0,0,0,0.5)] md:scale-[1.02]'
                   : 'border-white/[0.06] shadow-[0_4px_24px_rgba(0,0,0,0.4)]'
@@ -86,12 +87,12 @@ export default function RoomTierComparison() {
                   ))}
                 </ul>
 
-                {/* Check Availability CTA */}
+                {/* P2-02: CTA labels room-specific to carry reservation commitment */}
                 <PhoneLink
                   source={`rooms-card-${room.id}`}
                   className="inline-flex items-center justify-center min-h-[44px] font-inter font-semibold text-sm bg-transparent border border-neon-teal rounded-full px-6 py-3 hover:bg-neon-teal/10 transition-colors duration-150 text-neon-teal"
                 >
-                  Check Availability
+                  {room.id === 'group' ? 'Call and Lock Your Room' : `Call to Reserve ${room.name}`}
                 </PhoneLink>
               </div>
             </motion.div>

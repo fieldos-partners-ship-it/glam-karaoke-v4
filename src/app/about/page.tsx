@@ -17,6 +17,19 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${siteUrl}/about`,
   },
+  // P2-01: Per-page OG override
+  openGraph: {
+    title: "About Glam Karaoke — Annandale's Karaoke Destination Since 2022",
+    description: "Northern Virginia's only karaoke venue with a full main stage, 12 private rooms, and Korean-American kitchen. 4.2★ across 250 Google reviews.",
+    url: `${siteUrl}/about`,
+    images: [{ url: '/images/storefront-1.jpg', width: 1200, height: 630, alt: 'Glam Karaoke exterior — 4369 John Marr Dr, Annandale VA' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "About Glam Karaoke — Annandale's Karaoke Destination Since 2022",
+    description: "Northern Virginia's only karaoke venue with a full main stage, 12 private rooms, and Korean-American kitchen. 4.2★ across 250 Google reviews.",
+    images: ['/images/storefront-1.jpg'],
+  },
 }
 
 export default function AboutPage() {
@@ -55,8 +68,9 @@ export default function AboutPage() {
       {/* About CTA */}
       <section className="bg-stage-noir py-16" aria-label="Visit Glam Karaoke">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          {/* P2-09: Closing copy extends the desire created above — not a check-in question */}
           <p className="font-clash font-semibold text-[24px] md:text-[32px] text-soft-white mb-6">
-            Ready to come in?
+            Your room is waiting. Make it your night.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <PhoneLink

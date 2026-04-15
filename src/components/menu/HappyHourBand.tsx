@@ -1,6 +1,7 @@
 'use client'
 
 import CTAButton from '@/components/ui/CTAButton'
+import PhoneLink from '@/components/ui/PhoneLink'
 import { menuExperience } from '@/data/content'
 
 interface HappyHourBandProps {
@@ -57,10 +58,17 @@ export default function HappyHourBand({ onViewDrinks }: HappyHourBandProps) {
               <p className="mt-4 font-inter text-sm leading-relaxed text-cool-mist md:text-[15px]">
                 This tab stays honest about the offer. The Drinks tab shows the actual lineup, while the bar team can tell you exactly what is discounted that night.
               </p>
-              <div className="mt-6">
+              <div className="mt-6 flex flex-col gap-3">
                 <CTAButton variant="secondary" size="md" onClick={onViewDrinks}>
                   See Drinks
                 </CTAButton>
+                {/* P2-06: Conversion path from dead-end Happy Hour tab */}
+                <PhoneLink
+                  source="happy-hour-band"
+                  className="inline-flex items-center gap-2 font-inter font-semibold text-sm text-neon-teal min-h-[44px]"
+                >
+                  Call us to lock a room for happy hour →
+                </PhoneLink>
               </div>
             </div>
           </div>

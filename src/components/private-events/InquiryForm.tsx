@@ -206,8 +206,9 @@ export default function InquiryForm() {
             {state === 'submitting' ? 'Sending…' : 'Request Availability'}
           </CTAButton>
 
+          {/* P2-05: Affirmative reassurance — addresses spam/obligation concern at the point of commitment */}
           <p className="font-inter text-cool-mist/60 text-xs text-center mt-4">
-            Not a booking confirmation. We&apos;ll follow up within 2 hours.
+            We respond within 2 hours. Your info is only used to confirm your booking — no spam, ever.
           </p>
         </form>
       )}

@@ -1,5 +1,8 @@
-// HappyHourCallout — Centered dark section with happy hour info
-// Server component — no interactivity
+// HappyHourCallout — Centered dark section with happy hour info + bottom CTA
+// P2-10: Added CTAButton + PhoneLink so homepage doesn't dead-end at footer
+
+import CTAButton from '@/components/ui/CTAButton'
+import PhoneLink from '@/components/ui/PhoneLink'
 
 export default function HappyHourCallout() {
   return (
@@ -13,6 +16,17 @@ export default function HappyHourCallout() {
         <p className="menu-subtext mt-3 text-[18px]">
           Walk-ins always welcome. Reservations suggested on weekends.
         </p>
+
+        {/* P2-10: Final homepage CTA — no dead end before footer */}
+        <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <CTAButton href="/reservations" variant="primary" size="lg">
+            Reserve Your Room →
+          </CTAButton>
+          <PhoneLink
+            source="homepage-bottom-cta"
+            className="font-inter font-semibold text-base text-cool-mist hover:text-soft-white min-h-[44px] inline-flex items-center"
+          />
+        </div>
       </div>
     </section>
   )

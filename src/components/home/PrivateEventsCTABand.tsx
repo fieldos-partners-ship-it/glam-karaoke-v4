@@ -21,8 +21,9 @@ export default function PrivateEventsCTABand() {
           Perfect for birthdays, bachelorettes, and corporate outings.
         </p>
 
+        {/* P2-04: Active forward-motion CTA vs passive "Request" */}
         <CTAButton href="/private-events" variant="secondary" size="lg">
-          Request a Private Event
+          Plan Your Private Event →
         </CTAButton>
       </div>
     </section>

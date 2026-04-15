@@ -131,9 +131,10 @@ function RoomCard({ room, elevated, wide, onClick }: RoomCardProps) {
           )}
         </div>
 
+        {/* P2-01: href changed /rooms→/reservations; copy changed to match booking intent */}
         <div onClick={onClick} className={wide ? 'mt-4 md:mt-0 md:flex-shrink-0' : 'mt-4'}>
-          <CTAButton href="/rooms" variant="ghost" size="sm">
-            Book This Room →
+          <CTAButton href="/reservations" variant="ghost" size="sm">
+            Reserve This Room →
           </CTAButton>
         </div>
       </div>

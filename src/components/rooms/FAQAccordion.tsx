@@ -3,37 +3,11 @@
 // FAQAccordion — Client-side expand/collapse FAQ
 // 'use client' required: useState for open/close tracking
 // GC-14: accessible pattern — aria-expanded, aria-controls
+// GC-1: FAQ data imported from content.ts — shared source with buildFAQSchema()
 
 import { useState } from 'react'
 import { ChevronDown } from 'lucide-react'
-
-const faqs = [
-  {
-    id: 'walk-ins',
-    question: 'Do you accept walk-ins?',
-    answer: 'Yes — walk-ins are always welcome. However, rooms fill fast on Fridays and Saturdays, so we strongly suggest calling ahead to reserve your room, especially for groups of 5 or more.',
-  },
-  {
-    id: 'byob',
-    question: 'Is Glam Karaoke BYOB?',
-    answer: 'No. Glam Karaoke has a full bar with craft cocktails, 16 soju flavors, draft beer, and wine. Outside alcohol is not permitted. Happy hour runs 5–8 PM Sunday through Thursday.',
-  },
-  {
-    id: 'song-selection',
-    question: 'How does song selection work?',
-    answer: 'Every room has a dual karaoke system — YouTube for the latest songs and a traditional Korean karaoke system for a massive library of classics. An iPad is provided for easy browsing and song queuing. Staff will walk you through it when you arrive.',
-  },
-  {
-    id: 'food-ordering',
-    question: 'Can we order food in the room?',
-    answer: 'Yes. Our Korean-American kitchen is available throughout your session. Order through your room\'s service — no need to leave. Bulgogi nachos and kimchi fried rice are crowd favorites.',
-  },
-  {
-    id: 'minimum',
-    question: 'Is there a minimum group size or time?',
-    answer: 'There\'s no strict minimum group size. The Duo Room comfortably fits 2–4 guests, the Group Room fits 5–10, and the Party Suite fits up to 20. Room rental is by the hour. Call us for current minimums on weekend nights.',
-  },
-]
+import { faqItems as faqs } from '@/data/content'
 
 export default function FAQAccordion() {
   const [openId, setOpenId] = useState<string | null>(null)
