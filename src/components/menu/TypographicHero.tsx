@@ -54,7 +54,7 @@ export default function TypographicHero({
   }
 
   return (
-    <section className="bg-stage-noir pt-24 pb-12 md:pb-14" aria-label="Glam Karaoke menu">
+    <section className="bg-stage-noir pt-28 md:pt-36 pb-12 md:pb-14" aria-label="Glam Karaoke menu">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <p className="menu-kicker mb-4">
           THE MENU

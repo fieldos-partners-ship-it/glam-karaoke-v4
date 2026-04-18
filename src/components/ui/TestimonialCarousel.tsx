@@ -201,7 +201,7 @@ export default function TestimonialCarousel({
                       key={review.name}
                       type="button"
                       onClick={() => handleSelect(index)}
-                      className={`rounded-full border px-3 py-1.5 text-xs font-inter font-semibold uppercase tracking-[0.12em] transition-colors duration-150 ${
+                      className={`inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-full border px-3 text-xs font-inter font-semibold uppercase tracking-[0.12em] transition-colors duration-150 ${
                         index === activeIndex
                           ? 'border-neon-teal bg-neon-teal text-logo-noir'
                           : 'border-white/[0.08] bg-white/[0.03] text-cool-mist hover:text-soft-white'

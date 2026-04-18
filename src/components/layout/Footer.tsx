@@ -121,7 +121,7 @@ export default function Footer() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-cool-mist text-sm font-inter tracking-[0.03em] hover:text-soft-white transition-colors duration-150"
+                      className="inline-flex min-h-[44px] min-w-[44px] items-center text-cool-mist text-sm font-inter tracking-[0.03em] hover:text-soft-white transition-colors duration-150 py-2"
                     >
                       {link.label}
                     </Link>
@@ -142,14 +142,14 @@ export default function Footer() {
               href="https://fieldospartners.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-inter text-[11px] text-cool-mist/50 hover:text-cool-mist transition-colors duration-150"
+              className="inline-flex min-h-[44px] items-center font-inter text-[11px] text-cool-mist/50 hover:text-cool-mist transition-colors duration-150 py-2"
             >
               Site by FieldOS Partners · NoVA&apos;s Best-Priced Pro Web Studio
             </a>
             {/* AP-018: /privacy footer link */}
             <Link
               href="/privacy"
-              className="text-cool-mist text-xs font-inter hover:text-soft-white transition-colors duration-150"
+              className="inline-flex min-h-[44px] min-w-[44px] items-center text-cool-mist text-xs font-inter hover:text-soft-white transition-colors duration-150 py-2"
             >
               Privacy Policy
             </Link>

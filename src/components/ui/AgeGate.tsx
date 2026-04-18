@@ -1,7 +1,7 @@
 'use client'
 
-// AgeGate — 21+ entrance overlay, shown once per visitor (localStorage-gated)
-// Renders nothing on SSR; checks localStorage in useEffect
+// AgeGate — 21+ entrance overlay, shown once per browser session (sessionStorage-gated)
+// Renders nothing on SSR; checks sessionStorage in useEffect
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -14,13 +14,13 @@ export default function AgeGate() {
   const [declined, setDeclined] = useState(false)
 
   useEffect(() => {
-    if (!localStorage.getItem(STORAGE_KEY)) {
+    if (!sessionStorage.getItem(STORAGE_KEY)) {
       setVisible(true)
     }
   }, [])
 
   function handleAccept() {
-    localStorage.setItem(STORAGE_KEY, '1')
+    sessionStorage.setItem(STORAGE_KEY, '1')
     setVisible(false)
   }
 
