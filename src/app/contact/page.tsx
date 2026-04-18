@@ -8,21 +8,21 @@ import CTAButton from '@/components/ui/CTAButton'
 import { businessInfo, siteUrl } from '@/data/content'
 
 export const metadata: Metadata = {
-  title: 'Contact Glam Karaoke — Annandale, VA | (703) 942-5526',
-  description: 'Contact Glam Karaoke at 4369 John Marr Dr, Annandale, VA 22003. Call (703) 942-5526 to reserve a room. Open Sunday–Thursday 5 PM–2 AM, Friday–Saturday 5 PM–3 AM.',
+  title: 'Contact Glam Karaoke — Annandale, VA | (571) 378-0910',
+  description: 'Contact Glam Karaoke at 4369 John Marr Dr, Annandale, VA 22003. Call (571) 378-0910 to reserve a room. Open Daily 5 PM–2 AM.',
   alternates: {
     canonical: `${siteUrl}/contact`,
   },
   openGraph: {
     title: 'Contact Glam Karaoke — Annandale, VA',
-    description: 'Call (703) 942-5526 or visit us at 4369 John Marr Dr, Annandale, VA 22003. Open nightly for private karaoke rooms, DJ nights, and Korean-American food.',
+    description: 'Call (571) 378-0910 or visit us at 4369 John Marr Dr, Annandale, VA 22003. Open nightly for private karaoke rooms, DJ nights, and Korean-American food.',
     url: `${siteUrl}/contact`,
     images: [{ url: '/images/storefront-1.jpg', width: 1200, height: 630, alt: 'Glam Karaoke exterior — 4369 John Marr Dr, Annandale VA' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Contact Glam Karaoke — Annandale, VA',
-    description: 'Call (703) 942-5526 or visit us at 4369 John Marr Dr, Annandale, VA 22003.',
+    description: 'Call (571) 378-0910 or visit us at 4369 John Marr Dr, Annandale, VA 22003.',
     images: ['/images/storefront-1.jpg'],
   },
 }

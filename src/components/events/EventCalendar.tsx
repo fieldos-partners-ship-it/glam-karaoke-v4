@@ -41,10 +41,10 @@ export default function EventCalendar() {
             UPCOMING NIGHTS
           </p>
           <h2 className="font-clash font-semibold text-[30px] md:text-[40px] text-soft-white leading-[1.1] tracking-[-0.01em]">
-            Recurring Every Friday
+            DJ Nights
           </h2>
           <p className="text-cool-mist font-inter text-base mt-3">
-            Doors at 5 PM &middot; DJ @loxs1ck takes the stage at 9 PM
+            Doors at 5 PM &middot; DJ @loxs1ck at 9 PM &middot; Follow @glamkaraoke for upcoming dates
           </p>
         </div>
 

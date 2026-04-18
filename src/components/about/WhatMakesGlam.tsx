@@ -12,7 +12,7 @@ const pillars = [
   {
     icon: Mic,
     title: 'Live Main Stage',
-    body: 'The only Annandale venue with a live main stage. DJ @loxs1ck every Friday. The full venue becomes your stage on private bookings.',
+    body: 'The only Annandale venue with a live main stage. DJ nights on the main stage. The full venue becomes your stage on private bookings.',
   },
   {
     icon: UtensilsCrossed,

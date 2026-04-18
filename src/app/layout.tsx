@@ -10,6 +10,7 @@ import './globals.css'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import MobileStickyBar from '@/components/layout/MobileStickyBar'
+import AgeGate from '@/components/ui/AgeGate'
 import { ga4IsConfigured, ga4MeasurementId, siteUrl } from '@/data/content'
 import { buildBarOrClubSchema, buildWebSiteSchema } from '@/lib/seo/schemas'
 
@@ -112,6 +113,7 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-stage-noir text-soft-white font-inter antialiased">
+        <AgeGate />
         <Header />
         <main id="main-content">
           {children}

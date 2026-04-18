@@ -4,10 +4,10 @@
 export const businessInfo = {
   name: 'Glam Karaoke',
   tagline: 'Your Night. Your Songs. Your Room.',
-  phone: '(703) 942-5526',
-  phoneTel: '+17039425526',
-  phoneAlt: '(571) 378-0910',
-  phoneAltTel: '+15713780910',
+  phone: '(571) 378-0910',
+  phoneTel: '+15713780910',
+  phoneAlt: '(703) 942-5526',
+  phoneAltTel: '+17039425526',
   address: '4369 John Marr Dr, Annandale, VA 22003',
   addressStreet: '4369 John Marr Dr',
   addressCity: 'Annandale',
@@ -16,12 +16,9 @@ export const businessInfo = {
   googlePlaceId: 'ChIJT5fw6AWzt4kR_11B3_sLbXo',
   email: null as string | null,       // request from client
   hoursDisplay: {
-    'Monday–Thursday': '5 PM – 2 AM',
-    'Friday': '5 PM – 3 AM',
-    'Saturday': '3 PM – 3 AM',
-    'Sunday': '3 PM – 2 AM',
+    'Open Daily': '5 PM – 2 AM',
   },
-  happyHour: '5–8 PM, Sunday–Thursday',
+  happyHour: '$10 off/hr · 5–8 PM · Sun–Thu',
   established: 'March 18, 2022',
   // VIDEO_TODO: Replace null with client-provided video URL when footage is available
   videoSrc: null as string | null,
@@ -55,7 +52,7 @@ export const rooms = [
     mostPopular: false,
     features: [
       'Private room',
-      'Dual karaoke system (YouTube + traditional)',
+      'Traditional karaoke system',
       'iPad song control',
       'Professional sound system',
       'Club-style lighting',
@@ -64,7 +61,7 @@ export const rooms = [
     featureMatrix: {
       soundSystem: 'Professional grade',
       displayType: 'HD screen',
-      songLibrary: 'YouTube + Traditional Korean',
+      songLibrary: 'Traditional Korean library',
       ipadControl: true,
       tambourines: true,
       minParty: 2,
@@ -76,8 +73,8 @@ export const rooms = [
   {
     id: 'group',
     name: 'Group Room',
-    capacity: 'Up to 10 guests',
-    capacityMax: 10,
+    capacity: 'Up to 8 guests',
+    capacityMax: 8,
     capacityMin: 5,
     pricePerHour: 50,
     priceDisplay: 'From $50/hr',
@@ -98,7 +95,7 @@ export const rooms = [
       ipadControl: true,
       tambourines: true,
       minParty: 5,
-      maxParty: 10,
+      maxParty: 8,
       pricePerHour: 50,
     },
     image: '/images/ambiance-3.jpg',
@@ -106,9 +103,9 @@ export const rooms = [
   {
     id: 'party-suite',
     name: 'Party Suite',
-    capacity: 'Up to 20 guests',
-    capacityMax: 20,
-    capacityMin: 11,
+    capacity: 'Up to 18 guests',
+    capacityMax: 18,
+    capacityMin: 12,
     pricePerHour: 70,
     priceDisplay: 'From $70/hr',
     mostPopular: false,
@@ -128,8 +125,8 @@ export const rooms = [
       songLibrary: 'YouTube + Traditional Korean',
       ipadControl: true,
       tambourines: true,
-      minParty: 11,
-      maxParty: 20,
+      minParty: 12,
+      maxParty: 18,
       pricePerHour: 70,
     },
     image: '/images/photo-9.jpg',
@@ -348,7 +345,7 @@ export const menuExperience = {
   happyHour: {
     eyebrow: 'HAPPY HOUR',
     headline: 'Early drinks before the chorus hits.',
-    description: 'Happy hour runs Sunday through Thursday from 5 to 8 PM and applies to select drinks.',
+    description: 'Happy hour runs Sunday through Thursday from 5 to 8 PM — $10 off per hour on room rental.',
     notes: [
       'Ask the team which drinks are included that night.',
       'Walk in early, claim a table, and turn the room reservation into a full night out.',
@@ -419,7 +416,7 @@ export const djEvents = [
     dayOfWeek: 5, // Friday (0=Sun, 5=Fri)
     time: '9 PM – Close',
     doorsOpen: '5 PM',
-    recurring: true,
+    recurring: false,
   },
 ]
 
@@ -452,7 +449,7 @@ export const faqItems = [
   {
     id: 'song-selection',
     question: 'How does song selection work?',
-    answer: 'Every room has a dual karaoke system — YouTube for the latest songs and a traditional Korean karaoke system for a massive library of classics. An iPad is provided for easy browsing and song queuing. Staff will walk you through it when you arrive.',
+    answer: 'Rooms include a traditional Korean karaoke system with an extensive song library. Group and Party Suite rooms also support YouTube for the latest songs. An iPad in every room handles browsing and queuing — staff will walk you through setup when you arrive.',
   },
   {
     id: 'food-ordering',
@@ -462,7 +459,7 @@ export const faqItems = [
   {
     id: 'minimum',
     question: 'Is there a minimum group size or time?',
-    answer: "There's no strict minimum group size. The Duo Room comfortably fits 2–4 guests, the Group Room fits 5–10, and the Party Suite fits up to 20. Room rental is by the hour. Call us for current minimums on weekend nights.",
+    answer: "There's no strict minimum group size. The Duo Room comfortably fits 2–4 guests, the Group Room fits 5–8, and the Party Suite fits up to 18. Room rental is by the hour. Call us for current minimums on weekend nights.",
   },
   {
     id: 'parking',

@@ -44,7 +44,7 @@ export default function VideoLoopHero() {
             src="/images/ambiance-3.jpg"
             alt="Glam Karaoke interior — neon-lit private karaoke rooms in Annandale VA"
             fill
-            className="object-cover"
+            className="object-cover object-center"
             priority
             quality={100}
             sizes="100vw"
@@ -118,7 +118,7 @@ export default function VideoLoopHero() {
             className="flex sm:hidden items-center justify-center gap-2 min-h-[48px] px-6 rounded-full border border-white/40 bg-white/10 font-inter font-semibold text-[15px] tracking-[0.05em] text-soft-white hover:bg-white/20"
           >
             <PhoneCall className="h-4 w-4" aria-hidden="true" />
-            (703) 942-5526 — Reserve Now
+            {businessInfo.phone} — Reserve Now
           </PhoneLink>
         </div>
       </div>

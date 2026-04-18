@@ -11,7 +11,6 @@ import { motion } from 'framer-motion'
 
 // Static upcoming Friday event cards — client manages actual dates
 const upcomingEvents = [
-  { id: 'fri-1', date: 'FRI', dateNumber: '18', month: 'APR', title: 'DJ Night', dj: '@loxs1ck', time: '9 PM – Close' },
   { id: 'fri-2', date: 'FRI', dateNumber: '25', month: 'APR', title: 'DJ Night', dj: '@loxs1ck', time: '9 PM – Close' },
   { id: 'fri-3', date: 'FRI', dateNumber: '02', month: 'MAY', title: 'DJ Night', dj: '@loxs1ck', time: '9 PM – Close' },
 ]
@@ -33,7 +32,7 @@ export default function DJNightsTeaser() {
             DJ NIGHTS + EVENTS
           </p>
           <h2 className="menu-heading text-[36px] md:text-[52px]">
-            Every Friday. DJ @loxs1ck.
+            DJ Nights. Main Stage.
           </h2>
           <p className="menu-subtext mt-4 max-w-lg text-[19px]">
             Doors open at 5 PM. Happy hour until 8. DJ hits the main stage at 9.

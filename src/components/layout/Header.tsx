@@ -156,7 +156,7 @@ export default function Header() {
           <p className="text-cool-mist text-sm font-inter tracking-[0.03em]">
             or call{' '}
             <PhoneLink source="mobile-menu" className="text-neon-teal hover:text-neon-teal-hover">
-              (703) 942-5526
+              (571) 378-0910
             </PhoneLink>
           </p>
         </div>

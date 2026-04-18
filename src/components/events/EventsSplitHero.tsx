@@ -11,7 +11,7 @@ export default function EventsSplitHero() {
       <div className="relative w-full md:w-1/2 h-64 md:h-auto">
         <Image
           src="/images/ambiance-4.jpg"
-          alt="Glam Karaoke main stage — DJ nights every Friday"
+          alt="Glam Karaoke main stage — DJ nights and events"
           fill
           className="object-cover"
           priority
@@ -34,8 +34,7 @@ export default function EventsSplitHero() {
 
           {/* P2-04 SEO: venue name + location keyword in H1 */}
           <h1 className="menu-heading mb-4 text-[48px] md:text-[68px]">
-            DJ Nights at Glam Karaoke —<br />
-            Every Friday.
+            DJ Nights at Glam Karaoke
           </h1>
 
           <p className="menu-subtext mb-6 text-[19px] md:text-[21px]">

@@ -12,21 +12,21 @@ import CTAButton from '@/components/ui/CTAButton'
 
 export const metadata: Metadata = {
   title: 'DJ Nights & Events — Glam Karaoke Annandale VA',
-  description: 'Every Friday night: DJ @loxs1ck. Private karaoke rooms, main stage events, themed nights. Happy hour until 8 PM Sun–Thu.',
+  description: 'DJ nights with @loxs1ck on the main stage. Private karaoke rooms, themed nights, happy hour until 8 PM Sun–Thu.',
   alternates: {
     canonical: `${siteUrl}/events`,
   },
   // P2-01: Per-page OG override
   openGraph: {
-    title: 'DJ Nights at Glam Karaoke — Every Friday, Annandale VA',
-    description: 'DJ @loxs1ck on the main stage every Friday. Doors open at 5 PM, DJ at 9 PM. Private karaoke rooms available all night.',
+    title: 'DJ Nights at Glam Karaoke — Annandale VA',
+    description: 'DJ @loxs1ck on the main stage. Doors open at 5 PM, DJ at 9 PM. Private karaoke rooms available all night.',
     url: `${siteUrl}/events`,
     images: [{ url: '/images/ambiance-4.jpg', width: 1200, height: 630, alt: 'DJ night at Glam Karaoke main stage Annandale VA' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'DJ Nights at Glam Karaoke — Every Friday, Annandale VA',
-    description: 'DJ @loxs1ck on the main stage every Friday. Doors open at 5 PM, DJ at 9 PM. Private karaoke rooms available all night.',
+    title: 'DJ Nights at Glam Karaoke — Annandale VA',
+    description: 'DJ @loxs1ck on the main stage. Doors open at 5 PM, DJ at 9 PM. Private karaoke rooms available all night.',
     images: ['/images/ambiance-4.jpg'],
   },
 }
