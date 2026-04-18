@@ -58,7 +58,7 @@ export default function AgeGate() {
             {!declined ? (
               <>
                 <p className="font-inter text-[11px] font-semibold uppercase tracking-[0.2em] text-neon-teal mb-3">
-                  21+ VENUE
+                  ALL AGES · 21+ AFTER 10PM
                 </p>
                 <h2
                   id="age-gate-heading"
@@ -67,7 +67,7 @@ export default function AgeGate() {
                   Are you 21 or older?
                 </h2>
                 <p className="font-inter text-cool-mist text-sm mb-8 leading-relaxed">
-                  Glam Karaoke is a 21+ venue. You must be of legal drinking age to enter.
+                  All ages are welcome before 10pm. After 10pm, Glam Karaoke is 21+ only.
                 </p>
                 <div className="flex flex-col gap-3">
                   <button
@@ -86,15 +86,32 @@ export default function AgeGate() {
               </>
             ) : (
               <>
+                <p className="font-inter text-[11px] font-semibold uppercase tracking-[0.2em] text-amber-400 mb-3">
+                  HEADS UP
+                </p>
                 <h2
                   id="age-gate-heading"
-                  className="font-clash font-bold text-[26px] text-soft-white leading-tight mb-4"
+                  className="font-clash font-bold text-[24px] text-soft-white leading-tight mb-3"
                 >
-                  Come back when you&apos;re 21.
+                  You&apos;re welcome before 10pm.
                 </h2>
-                <p className="font-inter text-cool-mist text-sm leading-relaxed">
-                  We&apos;ll be here. See you soon. 🎤
+                <p className="font-inter text-cool-mist text-sm leading-relaxed mb-6">
+                  Glam Karaoke is open to all ages before 10pm. After 10pm, this becomes a 21+ venue and guests under 21 must exit. By entering, you acknowledge and agree to this policy.
                 </p>
+                <div className="flex flex-col gap-3">
+                  <button
+                    onClick={handleAccept}
+                    className="w-full min-h-[48px] bg-neon-teal text-stage-noir font-inter font-bold text-[15px] rounded-full hover:bg-neon-teal-hover transition-colors duration-150"
+                  >
+                    I understand — let me in
+                  </button>
+                  <button
+                    onClick={() => setDeclined(false)}
+                    className="w-full min-h-[48px] border border-white/20 text-cool-mist font-inter text-[15px] rounded-full hover:border-white/40 hover:text-soft-white transition-colors duration-150"
+                  >
+                    Go back
+                  </button>
+                </div>
               </>
             )}
           </motion.div>
