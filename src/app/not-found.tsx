@@ -60,7 +60,6 @@ export default function NotFound() {
             { label: 'Home', href: '/' },
             { label: 'Menu', href: '/menu' },
             { label: 'Events', href: '/events' },
-            { label: 'Private Events', href: '/private-events' },
             { label: 'Contact', href: '/contact' },
           ].map((link) => (
             <Link

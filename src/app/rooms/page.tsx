@@ -9,24 +9,24 @@ import RoomTierComparison from '@/components/rooms/RoomTierComparison'
 import RoomFeatureMatrix from '@/components/rooms/RoomFeatureMatrix'
 import BookingInfoBand from '@/components/rooms/BookingInfoBand'
 import FAQAccordion from '@/components/rooms/FAQAccordion'
+import HappyHourContent from '@/components/shared/HappyHourContent'
 
 export const metadata: Metadata = {
   title: 'Private Karaoke Rooms — Glam Karaoke Annandale VA',
-  description: 'Choose from Duo, Group, or Party Suite private karaoke rooms. From $40/hr. Professional sound, iPad song control, full bar. Walk-ins welcome.',
+  description: 'Small, Medium, and Large private karaoke rooms from $40/hr. Professional sound, iPad song control, full bar. Walk-ins welcome.',
   alternates: {
     canonical: `${siteUrl}/rooms`,
   },
-  // P2-01: Per-page OG override — social sharing shows room-specific content
   openGraph: {
     title: 'Private Karaoke Rooms — Glam Karaoke Annandale VA',
-    description: 'Duo from $40/hr, Group from $50/hr, Party Suite from $70/hr. Professional sound, iPad control, club lighting.',
+    description: 'Small from $40/hr, Medium from $50/hr, Large from $70/hr. Professional sound, iPad control, club lighting.',
     url: `${siteUrl}/rooms`,
     images: [{ url: '/images/photo-10.jpg', width: 1200, height: 630, alt: 'Private karaoke room at Glam Karaoke Annandale VA' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Private Karaoke Rooms — Glam Karaoke Annandale VA',
-    description: 'Duo from $40/hr, Group from $50/hr, Party Suite from $70/hr. Professional sound, iPad control, club lighting.',
+    description: 'Small from $40/hr, Medium from $50/hr, Large from $70/hr. Professional sound, iPad control, club lighting.',
     images: ['/images/photo-10.jpg'],
   },
 }
@@ -44,6 +44,11 @@ export default function RoomsPage() {
       <RoomTierComparison />
       <RoomFeatureMatrix />
       <BookingInfoBand />
+      <section className="bg-stage-noir py-20" aria-label="Happy hour">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <HappyHourContent />
+        </div>
+      </section>
       <FAQAccordion />
     </>
   )

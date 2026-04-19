@@ -7,7 +7,7 @@ import { buildReservationSchema, buildBreadcrumbSchema } from '@/lib/seo/schemas
 
 export const metadata: Metadata = {
   title: 'Book a Karaoke Room — Glam Karaoke Annandale VA',
-  description: 'Call Glam Karaoke to reserve a private karaoke room in Annandale, VA. Duo from $40/hr, Group from $50/hr, Party Suite from $70/hr.',
+  description: 'Call Glam Karaoke to reserve a private karaoke room in Annandale, VA. Small from $40/hr, Medium from $50/hr, Large from $70/hr.',
   alternates: {
     canonical: `${siteUrl}/reservations`,
   },

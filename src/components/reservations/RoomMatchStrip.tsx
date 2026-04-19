@@ -3,9 +3,9 @@ import { rooms } from '@/data/content'
 import { Sparkles, Users, Volume2 } from 'lucide-react'
 
 const roomMoments: Record<string, string> = {
-  duo: 'Best for date nights, warm-up rounds, and tight little crews.',
-  group: 'Best for birthdays, post-dinner chaos, and friend-group belting.',
-  'party-suite': 'Best for big celebrations, team nights, and all-out sing-offs.',
+  small: 'Best for date nights, warm-up rounds, and tight little crews up to 3.',
+  medium: 'Best for birthdays, post-dinner chaos, and friend-group belting (8–10).',
+  large: 'Best for big celebrations, team nights, and all-out sing-offs (15–20).',
 }
 
 export default function RoomMatchStrip() {
@@ -76,11 +76,11 @@ export default function RoomMatchStrip() {
                   source={`reservations-room-${room.id}`}
                   className="inline-flex min-h-[48px] w-full items-center justify-center rounded-full border border-neon-teal bg-neon-teal px-6 py-3 font-clash text-[14px] font-bold uppercase tracking-[0.08em] !text-logo-noir shadow-[0_0_24px_rgba(229,25,151,0.28)] hover:border-neon-teal-hover hover:bg-neon-teal-hover hover:!text-logo-noir"
                 >
-                  {room.id === 'duo'
-                    ? 'Call to Claim Your Duo Room'
-                    : room.id === 'group'
-                    ? 'Call to Lock Your Group Room'
-                    : 'Call and Claim the Suite'}
+                  {room.id === 'small'
+                    ? 'Call to Claim the Small Room'
+                    : room.id === 'medium'
+                    ? 'Call to Lock the Medium Room'
+                    : 'Call and Claim the Large Room'}
                 </PhoneLink>
               </div>
             </article>

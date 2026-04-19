@@ -1,7 +1,7 @@
 'use client'
 
 // RoomsPreviewGrid — Bento grid of 3 room tiers
-// Layout: Duo (small, top-left 5-col), Group (large, center 7-col), Party Suite (bottom full-width)
+// Layout: Small (top-left 5-col), Medium (center 7-col), Large (bottom full-width)
 // AP-039: StaggerReveal wraps all cards with 60ms stagger
 // AP-008: Neon Teal used only on price badges and "Most Popular" badge
 
@@ -28,7 +28,7 @@ const cardVariants = {
 }
 
 export default function RoomsPreviewGrid() {
-  const [duo, group, partySuite] = rooms
+  const [small, medium, large] = rooms
 
   return (
     <section className="bg-stage-noir py-20 px-4 sm:px-6 lg:px-8" aria-label="Private karaoke rooms">
@@ -51,19 +51,19 @@ export default function RoomsPreviewGrid() {
           variants={containerVariants}
           className="grid grid-cols-1 md:grid-cols-12 gap-4"
         >
-          {/* Duo Room — 5-col top-left */}
+          {/* Small Room — 5-col top-left */}
           <motion.div variants={cardVariants} className="md:col-span-5">
-            <RoomCard room={duo} onClick={() => trackRoomsCTAClick(duo.id)} />
+            <RoomCard room={small} onClick={() => trackRoomsCTAClick(small.id)} />
           </motion.div>
 
-          {/* Group Room — 7-col center, elevated */}
+          {/* Medium Room — 7-col center, elevated */}
           <motion.div variants={cardVariants} className="md:col-span-7">
-            <RoomCard room={group} elevated onClick={() => trackRoomsCTAClick(group.id)} />
+            <RoomCard room={medium} elevated onClick={() => trackRoomsCTAClick(medium.id)} />
           </motion.div>
 
-          {/* Party Suite — full width bottom */}
+          {/* Large Room — full width bottom */}
           <motion.div variants={cardVariants} className="md:col-span-12">
-            <RoomCard room={partySuite} wide onClick={() => trackRoomsCTAClick(partySuite.id)} />
+            <RoomCard room={large} wide onClick={() => trackRoomsCTAClick(large.id)} />
           </motion.div>
         </motion.div>
       </div>

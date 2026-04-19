@@ -89,28 +89,28 @@ export function buildReservationSchema() {
       postalCode: businessInfo.addressZip,
       addressCountry: 'US',
     },
-    description: 'Call Glam Karaoke to reserve a private karaoke room. Duo from $40/hr, Group from $50/hr, Party Suite from $70/hr.',
+    description: 'Call Glam Karaoke to reserve a private karaoke room. Small from $40/hr, Medium from $50/hr, Large from $70/hr.',
     offers: [
       {
         '@type': 'Offer',
-        name: 'Duo Room',
+        name: 'Small Room',
         price: '40',
         priceCurrency: 'USD',
-        description: 'Private karaoke room for up to 4 guests. From $40/hr.',
+        description: 'Private karaoke room for up to 3 guests. From $40/hr.',
       },
       {
         '@type': 'Offer',
-        name: 'Group Room',
+        name: 'Medium Room',
         price: '50',
         priceCurrency: 'USD',
-        description: 'Private karaoke room for up to 10 guests. From $50/hr.',
+        description: 'Private karaoke room for 8–10 guests. From $50/hr.',
       },
       {
         '@type': 'Offer',
-        name: 'Party Suite',
+        name: 'Large Room',
         price: '70',
         priceCurrency: 'USD',
-        description: 'Largest private karaoke room for up to 20 guests. From $70/hr.',
+        description: 'Largest private karaoke room for 15–20 guests. From $70/hr.',
       },
     ],
   }
@@ -159,21 +159,3 @@ export function buildContactSchema() {
   }
 }
 
-export function buildEventSchema() {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'EventVenue',
-    name: businessInfo.name,
-    telephone: businessInfo.phoneTel, // AP-013: E.164 format
-    url: `${siteUrl}/private-events`,
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: businessInfo.addressStreet,
-      addressLocality: businessInfo.addressCity,
-      addressRegion: businessInfo.addressState,
-      postalCode: businessInfo.addressZip,
-      addressCountry: 'US',
-    },
-    description: 'Private event bookings at Glam Karaoke. Party Suite holds up to 20 guests. Birthdays, bachelorettes, corporate events.',
-  }
-}

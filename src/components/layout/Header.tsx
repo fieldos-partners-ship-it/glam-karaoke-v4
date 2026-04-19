@@ -17,7 +17,6 @@ const navLinks = [
   { label: 'Rooms', href: '/rooms' },
   { label: 'Menu', href: '/menu' },
   { label: 'Events', href: '/events' },
-  { label: 'Private Events', href: '/private-events' },
   { label: 'Reservations', href: '/reservations' },
 ]
 

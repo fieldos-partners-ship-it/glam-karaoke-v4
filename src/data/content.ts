@@ -18,7 +18,7 @@ export const businessInfo = {
   hoursDisplay: {
     'Open Daily': '5 PM – 2 AM',
   },
-  happyHour: '$10 off/hr · 5–8 PM · Sun–Thu',
+  happyHour: 'Rooms $10 off/hr Sun–Thu · Food & Drinks Mon–Fri · 5–8 PM',
   established: 'March 18, 2022',
   // VIDEO_TODO: Replace null with client-provided video URL when footage is available
   videoSrc: null as string | null,
@@ -40,13 +40,14 @@ export const social = {
   yelpUrl: null as string | null,
 }
 
+// IMAGE_TODO: Replace each room's `image` with real Small/Medium/Large room photo when client sends them.
 export const rooms = [
   {
-    id: 'duo',
-    name: 'Duo Room',
-    capacity: 'Up to 4 guests',
-    capacityMax: 4,
-    capacityMin: 2,
+    id: 'small',
+    name: 'Small Room',
+    capacity: 'Up to 3 guests',
+    capacityMax: 3,
+    capacityMin: 1,
     pricePerHour: 40,
     priceDisplay: 'From $40/hr',
     mostPopular: false,
@@ -64,18 +65,18 @@ export const rooms = [
       songLibrary: 'Traditional Korean library',
       ipadControl: true,
       tambourines: true,
-      minParty: 2,
-      maxParty: 4,
+      minParty: 1,
+      maxParty: 3,
       pricePerHour: 40,
     },
     image: '/images/interior-2.jpg',
   },
   {
-    id: 'group',
-    name: 'Group Room',
-    capacity: 'Up to 8 guests',
-    capacityMax: 8,
-    capacityMin: 5,
+    id: 'medium',
+    name: 'Medium Room',
+    capacity: 'Up to 8–10 guests',
+    capacityMax: 10,
+    capacityMin: 8,
     pricePerHour: 50,
     priceDisplay: 'From $50/hr',
     mostPopular: true,
@@ -94,18 +95,18 @@ export const rooms = [
       songLibrary: 'YouTube + Traditional Korean',
       ipadControl: true,
       tambourines: true,
-      minParty: 5,
-      maxParty: 8,
+      minParty: 8,
+      maxParty: 10,
       pricePerHour: 50,
     },
     image: '/images/ambiance-3.jpg',
   },
   {
-    id: 'party-suite',
-    name: 'Party Suite',
-    capacity: 'Up to 18 guests',
-    capacityMax: 18,
-    capacityMin: 12,
+    id: 'large',
+    name: 'Large Room',
+    capacity: 'Up to 15–20 guests',
+    capacityMax: 20,
+    capacityMin: 15,
     pricePerHour: 70,
     priceDisplay: 'From $70/hr',
     mostPopular: false,
@@ -125,8 +126,8 @@ export const rooms = [
       songLibrary: 'YouTube + Traditional Korean',
       ipadControl: true,
       tambourines: true,
-      minParty: 12,
-      maxParty: 18,
+      minParty: 15,
+      maxParty: 20,
       pricePerHour: 70,
     },
     image: '/images/photo-9.jpg',
@@ -154,7 +155,7 @@ export type MenuSection = {
 export const menuExperience = {
   // P2-05 SEO / P3-02 conversion: location keyword + cuisine specificity added to H1
   heroTitle: 'Glam Karaoke Kitchen & Bar — Annandale, VA',
-  heroSupport: 'Korean bar food · soju, beer, wine, and cocktail board specials · happy hour 5–8 PM',
+  heroSupport: 'Korean bar food · soju, beer, wine, and cocktail board specials · happy hour 5–8 PM Mon–Fri',
   foodSections: [
     {
       id: 'starters',
@@ -344,12 +345,32 @@ export const menuExperience = {
   ] satisfies MenuSection[],
   happyHour: {
     eyebrow: 'HAPPY HOUR',
-    headline: 'Early drinks before the chorus hits.',
-    description: 'Happy hour runs Sunday through Thursday from 5 to 8 PM — $10 off per hour on room rental.',
-    notes: [
-      'Ask the team which drinks are included that night.',
-      'Walk in early, claim a table, and turn the room reservation into a full night out.',
-      'The full drink lineup stays available in the Drinks tab.',
+    headline: 'Two happy hours. One early-week win.',
+    tiers: [
+      {
+        id: 'rooms',
+        label: 'Rooms',
+        days: 'Sunday – Thursday',
+        hours: '5 – 8 PM',
+        offer: '$10 off per hour on room rental',
+        notes: [
+          'Applies to every room — Small, Medium, and Large',
+          'Walk in early, lock in the rate, stay as long as you want',
+        ],
+      },
+      {
+        id: 'food-drinks',
+        label: 'Food & Drinks',
+        days: 'Monday – Friday',
+        hours: '5 – 8 PM',
+        offer: 'Food and drink specials',
+        notes: [
+          '$2 off beers',
+          '$2 off shots',
+          '$4 off any soju',
+          '$2 off starters / appetizers',
+        ],
+      },
     ],
   },
 }
@@ -380,7 +401,7 @@ export const featuredReviews = [
   {
     name: 'Alyssa Kim',
     rating: 5,
-    text: 'We booked the Party Suite for a birthday and it felt effortless from the first call. The room looked incredible, the staff stayed on top of food and drinks, and everyone kept asking when we can do it again.',
+    text: 'We booked the Large Room for a birthday and it felt effortless from the first call. The room looked incredible, the staff stayed on top of food and drinks, and everyone kept asking when we can do it again.',
     source: 'Google',
     // P2-11: Best objection-handler for phone reservation flow — surface on /reservations
     contexts: ['home', 'groups', 'reservations'],
@@ -439,17 +460,17 @@ export const faqItems = [
   {
     id: 'walk-ins',
     question: 'Do you accept walk-ins?',
-    answer: 'Yes — walk-ins are always welcome. However, rooms fill fast on Fridays and Saturdays, so we strongly suggest calling ahead to reserve your room, especially for groups of 5 or more.',
+    answer: 'Yes — walk-ins are always welcome. Rooms fill fast on Fridays and Saturdays, so we strongly suggest calling ahead to reserve your room.',
   },
   {
     id: 'byob',
     question: 'Is Glam Karaoke BYOB?',
-    answer: 'No. Glam Karaoke has a full bar with craft cocktails, 16 soju flavors, draft beer, and wine. Outside alcohol is not permitted. Happy hour runs 5–8 PM Sunday through Thursday.',
+    answer: 'No. Glam Karaoke has a full bar with craft cocktails, 16 soju flavors, draft beer, and wine. Outside alcohol is not permitted. Happy hour runs 5–8 PM Sunday through Thursday on rooms, and 5–8 PM Monday through Friday on food and drinks.',
   },
   {
     id: 'song-selection',
     question: 'How does song selection work?',
-    answer: 'Rooms include a traditional Korean karaoke system with an extensive song library. Group and Party Suite rooms also support YouTube for the latest songs. An iPad in every room handles browsing and queuing — staff will walk you through setup when you arrive.',
+    answer: 'Every room includes a traditional Korean karaoke system with an extensive song library. Medium and Large rooms also support YouTube for the latest songs — the Small Room runs on the traditional system only. An iPad in every room handles browsing and queuing, and staff will walk you through setup when you arrive.',
   },
   {
     id: 'food-ordering',
@@ -459,7 +480,7 @@ export const faqItems = [
   {
     id: 'minimum',
     question: 'Is there a minimum group size or time?',
-    answer: "There's no strict minimum group size. The Duo Room comfortably fits 2–4 guests, the Group Room fits 5–8, and the Party Suite fits up to 18. Room rental is by the hour. Call us for current minimums on weekend nights.",
+    answer: "There's no strict minimum group size. The Small Room fits up to 3 guests, the Medium Room fits 8–10, and the Large Room fits 15–20. Room rental is by the hour. Call us for current minimums on weekend nights.",
   },
   {
     id: 'parking',

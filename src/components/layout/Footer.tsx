@@ -30,7 +30,6 @@ const navLinks = [
   { label: 'Rooms', href: '/rooms' },
   { label: 'Menu', href: '/menu' },
   { label: 'Events', href: '/events' },
-  { label: 'Private Events', href: '/private-events' },
   { label: 'About', href: '/about' },
   { label: 'Reservations', href: '/reservations' },
   // P1-01 SEO / P3-07: Contact page added to footer nav

@@ -92,7 +92,7 @@ export default function RoomTierComparison() {
                   source={`rooms-card-${room.id}`}
                   className="inline-flex items-center justify-center min-h-[44px] font-inter font-semibold text-sm bg-transparent border border-neon-teal rounded-full px-6 py-3 hover:bg-neon-teal/10 transition-colors duration-150 text-neon-teal"
                 >
-                  {room.id === 'group' ? 'Call and Lock Your Room' : `Call to Reserve ${room.name}`}
+                  {room.id === 'medium' ? 'Call and Lock Your Room' : `Call to Reserve ${room.name}`}
                 </PhoneLink>
               </div>
             </motion.div>
