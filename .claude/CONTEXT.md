@@ -1,5 +1,34 @@
 # Glam Karaoke v4 — Session Context
 
+## Session: 2026-04-18 — Mobile Hero Polish
+
+### What Was Done
+
+1. **Eyebrow text color** (`VideoLoopHero.tsx`) — "Annandale, VA · 12 Private Rooms" changed from `text-neon-teal` → `text-white`
+
+2. **Mobile-only background image swap** (`VideoLoopHero.tsx`) — Split into two responsive images:
+   - Mobile (`md:hidden`): `photo-9.jpg` (karaoke room with TV screen)
+   - Tablet + desktop (`hidden md:block`): `ambiance-3.jpg` (original moody interior)
+
+3. **Logo overlay on mobile hero** — `Logo PNG.png` (neon sign photo) centered at `top-[35%]`, `rounded-2xl overflow-hidden`, mobile only
+
+4. **Purple neon glow animation** — Framer Motion `motion.div` wraps the logo:
+   - Idle: 3.2s breathing pulse, triple-layer `drop-shadow` in purple
+   - Tap: spring to 108% scale + full-blast purple burst (40/80/120px spread)
+
+### Files Changed
+- `src/components/home/VideoLoopHero.tsx`
+
+### Pushed
+- Commit `2c705ef` → `main`
+
+### Open Items (carried forward)
+- Google Maps Embed API key, GA4 ID, Formspree endpoint
+- Verify GBP phone (703-942-5526 vs 571-378-0910)
+- Verify rating still 4.2★ / 250 reviews before launch
+
+---
+
 ## Session: 2026-04-15 — Optimize v2, Phase 4B: Content Fixer — COMPLETE
 
 ### What Was Done

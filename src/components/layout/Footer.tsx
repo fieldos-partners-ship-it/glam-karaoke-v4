@@ -137,23 +137,26 @@ export default function Footer() {
           <p className="text-cool-mist text-xs font-inter">
             © {currentYear} {businessInfo.name}. All rights reserved.
           </p>
-          <div className="flex flex-wrap gap-4 items-center justify-center sm:justify-end">
-            <a
-              href="https://fieldospartners.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex min-h-[44px] items-center font-inter text-[11px] text-cool-mist/50 hover:text-cool-mist transition-colors duration-150 py-2"
-            >
-              Site by FieldOS Partners · NoVA&apos;s Best-Priced Pro Web Studio
-            </a>
-            {/* AP-018: /privacy footer link */}
-            <Link
-              href="/privacy"
-              className="inline-flex min-h-[44px] min-w-[44px] items-center text-cool-mist text-xs font-inter hover:text-soft-white transition-colors duration-150 py-2"
-            >
-              Privacy Policy
-            </Link>
-          </div>
+          {/* AP-018: /privacy footer link */}
+          <Link
+            href="/privacy"
+            className="inline-flex min-h-[44px] min-w-[44px] items-center text-cool-mist text-xs font-inter hover:text-soft-white transition-colors duration-150 py-2"
+          >
+            Privacy Policy
+          </Link>
+        </div>
+
+        {/* FieldOS credit — centered, gold */}
+        <div className="pt-6 text-center">
+          <a
+            href="https://fieldospartners.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex min-h-[44px] items-center justify-center font-inter text-xs tracking-[0.08em] py-2"
+            style={{ color: '#C9A84C' }}
+          >
+            Designed by FieldOS
+          </a>
         </div>
       </div>
     </footer>

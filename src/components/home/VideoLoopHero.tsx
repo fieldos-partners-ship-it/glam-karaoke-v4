@@ -6,7 +6,6 @@
 // AP-005: First CTA is ghost-light "See Our Rooms" — NOT "Book Now"
 
 import Image from 'next/image'
-import { motion } from 'framer-motion'
 import { PhoneCall } from 'lucide-react'
 import PhoneLink from '@/components/ui/PhoneLink'
 import CTAButton from '@/components/ui/CTAButton'
@@ -38,23 +37,11 @@ export default function VideoLoopHero() {
         </video>
       ) : (
         <>
-          {/* Mobile background */}
-          <div className="absolute inset-0 md:hidden">
+          {/* Storefront exterior — same image across breakpoints */}
+          <div className="absolute inset-0">
             <Image
-              src="/images/photo-9.jpg"
-              alt="Glam Karaoke interior — neon-lit private karaoke rooms in Annandale VA"
-              fill
-              className="object-cover object-center"
-              priority
-              quality={100}
-              sizes="100vw"
-            />
-          </div>
-          {/* Tablet + desktop background */}
-          <div className="absolute inset-0 hidden md:block">
-            <Image
-              src="/images/ambiance-3.jpg"
-              alt="Glam Karaoke interior — neon-lit private karaoke rooms in Annandale VA"
+              src="/images/storefront-1.webp"
+              alt="Glam Karaoke storefront sign against blue sky in Annandale, VA"
               fill
               className="object-cover object-center"
               priority
@@ -65,46 +52,16 @@ export default function VideoLoopHero() {
         </>
       )}
 
-      {/* GC-10: Gradient overlay — text legible at bottom, atmosphere visible at top */}
+      {/* Gradient overlay — darkens toward bottom for tagline legibility over storefront photo */}
       <div
         className="absolute inset-0"
         style={{
-          background: 'linear-gradient(to top, rgba(14,17,23,0.92) 0%, rgba(14,17,23,0.5) 40%, rgba(14,17,23,0.15) 70%, rgba(14,17,23,0.0) 100%)',
+          background: 'linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.45) 40%, rgba(0,0,0,0.75) 100%)',
         }}
         aria-hidden="true"
       />
 
-      {/* Logo overlay — mobile only, upper-center of hero */}
-      <div className="md:hidden absolute inset-x-0 top-[35%] -translate-y-1/2 z-10 flex justify-center px-8">
-        <motion.div
-          className="cursor-pointer select-none"
-          animate={{
-            filter: [
-              'drop-shadow(0 0 12px rgba(168,85,247,0.6)) drop-shadow(0 0 30px rgba(168,85,247,0.25))',
-              'drop-shadow(0 0 28px rgba(168,85,247,1)) drop-shadow(0 0 60px rgba(168,85,247,0.6)) drop-shadow(0 0 90px rgba(216,80,232,0.35))',
-              'drop-shadow(0 0 12px rgba(168,85,247,0.6)) drop-shadow(0 0 30px rgba(168,85,247,0.25))',
-            ],
-          }}
-          transition={{ duration: 3.2, repeat: Infinity, ease: [0.45, 0, 0.55, 1] }}
-          whileTap={{
-            scale: 1.08,
-            filter: 'drop-shadow(0 0 40px rgba(168,85,247,1)) drop-shadow(0 0 80px rgba(168,85,247,0.85)) drop-shadow(0 0 120px rgba(216,80,232,0.5))',
-            transition: { type: 'spring', stiffness: 260, damping: 22 },
-          }}
-        >
-          <div className="rounded-2xl overflow-hidden">
-            <Image
-              src="/images/Logo PNG.png"
-              alt="Glam Karaoke"
-              width={802}
-              height={554}
-              className="w-64 h-auto"
-            />
-          </div>
-        </motion.div>
-      </div>
-
-      {/* Eyebrow — hidden on mobile, shown on desktop in the open sky area */}
+{/* Eyebrow — hidden on mobile, shown on desktop in the open sky area */}
       <div className="hidden md:block absolute inset-x-0 top-28 z-10 px-4 text-center md:top-36 lg:top-40">
         <p className="font-inter text-[14px] font-bold uppercase tracking-[0.24em] text-white [text-shadow:0_3px_18px_rgba(0,0,0,0.45)] md:text-[16px]">
           Annandale, VA · 12 Private Rooms
@@ -115,12 +72,18 @@ export default function VideoLoopHero() {
       <div className="relative z-10 w-full max-w-[820px] mx-auto px-4 pb-16 md:pb-28 text-center">
         {/* H1 — Clash Display 700 */}
         {/* GC-M: 42px on mobile to prevent overflow at 375px; scales up at sm: and md: */}
-        <h1 className="menu-heading mb-5 text-[42px] sm:text-[64px] md:text-[88px]">
+        <h1
+          className="menu-heading mb-5 text-[42px] sm:text-[64px] md:text-[88px]"
+          style={{ textShadow: '0 2px 20px rgba(0,0,0,0.8), 0 0 4px rgba(0,0,0,0.6)' }}
+        >
           Your Night. Your Songs. Your Room.
         </h1>
 
-        {/* Subhead */}
-        <p className="menu-subtext-bright mx-auto mb-6 max-w-[44rem] text-[21px] md:text-[26px]">
+        {/* Subhead — white with matching shadow for readability over storefront image */}
+        <p
+          className="font-inter mx-auto mb-6 max-w-[44rem] text-[21px] leading-[1.6] tracking-[0.02em] text-white md:text-[26px]"
+          style={{ textShadow: '0 2px 20px rgba(0,0,0,0.8), 0 0 4px rgba(0,0,0,0.6)' }}
+        >
           12 private rooms. Live main stage. Korean-American kitchen. Annandale, VA.
         </p>
 
