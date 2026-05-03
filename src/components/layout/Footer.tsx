@@ -128,14 +128,27 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Credit row — same section, no divider */}
-        {/* Layout: Designed by FieldOS (far left) | © + Privacy (center) | empty (right balance) */}
-        <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-3 sm:items-center">
+        {/* Credit row — single centered row on desktop, stacked on mobile */}
+        <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center sm:items-center sm:gap-0">
+          <div className="flex flex-col items-center gap-2 sm:flex-row sm:gap-5">
+            <p className="text-cool-mist/70 text-xs font-inter">
+              © {currentYear} {businessInfo.name}. All rights reserved.
+            </p>
+            <Link
+              href="/privacy"
+              className="inline-flex min-h-[44px] items-center text-cool-mist/70 text-xs font-inter hover:text-soft-white transition-colors duration-150"
+            >
+              Privacy Policy
+            </Link>
+          </div>
+
+          <span className="hidden sm:inline sm:mx-4 text-cool-mist/30 text-xs" aria-hidden="true">•</span>
+
           <a
             href="https://fieldospartners.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex min-h-[44px] items-center gap-2.5 justify-self-center order-2 sm:order-1 sm:justify-self-start transition-opacity duration-150 hover:opacity-80"
+            className="inline-flex min-h-[44px] items-center gap-2.5 transition-opacity duration-150 hover:opacity-80"
             aria-label="Designed by FieldOS Partners — visit fieldospartners.com"
             style={{ fontFamily: 'var(--font-fieldos), system-ui, sans-serif' }}
           >
@@ -151,21 +164,6 @@ export default function Footer() {
               priority={false}
             />
           </a>
-
-          <div className="flex flex-col items-center gap-2 justify-self-center order-1 sm:order-2 sm:flex-row sm:gap-5">
-            <p className="text-cool-mist/70 text-xs font-inter">
-              © {currentYear} {businessInfo.name}. All rights reserved.
-            </p>
-            <Link
-              href="/privacy"
-              className="inline-flex min-h-[44px] items-center text-cool-mist/70 text-xs font-inter hover:text-soft-white transition-colors duration-150"
-            >
-              Privacy Policy
-            </Link>
-          </div>
-
-          {/* Right-side spacer for symmetry — keeps center cluster optically centered */}
-          <div aria-hidden="true" className="hidden sm:block" />
         </div>
       </div>
     </footer>
