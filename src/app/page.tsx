@@ -6,6 +6,7 @@ import type { Metadata } from 'next'
 import { siteUrl } from '@/data/content'
 import VideoLoopHero from '@/components/home/VideoLoopHero'
 import ReviewAggregateStrip from '@/components/home/ReviewAggregateStrip'
+import MapLocationCallout from '@/components/home/MapLocationCallout'
 
 export const metadata: Metadata = {
   title: 'Glam Karaoke — Private Karaoke Rooms in Annandale, VA',
@@ -20,6 +21,7 @@ export default function HomePage() {
     <>
       <VideoLoopHero />
       <ReviewAggregateStrip />
+      <MapLocationCallout />
     </>
   )
 }

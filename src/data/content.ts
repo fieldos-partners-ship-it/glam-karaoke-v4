@@ -53,8 +53,8 @@ export const rooms = [
     mostPopular: false,
     features: [
       'Private room',
-      'Traditional karaoke system',
-      'iPad song control',
+      'Tablet karaoke system (no YouTube)',
+      'Tablet song selection',
       'Professional sound system',
       'Club-style lighting',
       'Tambourines included',
@@ -62,14 +62,14 @@ export const rooms = [
     featureMatrix: {
       soundSystem: 'Professional grade',
       displayType: 'HD screen',
-      songLibrary: 'Traditional Korean library',
+      songLibrary: 'Tablet (Traditional Korean library)',
       ipadControl: true,
       tambourines: true,
       minParty: 1,
       maxParty: 3,
       pricePerHour: 40,
     },
-    image: '/images/interior-2.jpg',
+    image: '/images/room-small.jpg',
   },
   {
     id: 'medium',
@@ -99,7 +99,7 @@ export const rooms = [
       maxParty: 10,
       pricePerHour: 50,
     },
-    image: '/images/ambiance-3.jpg',
+    image: '/images/room-medium.jpg',
   },
   {
     id: 'large',
@@ -130,7 +130,7 @@ export const rooms = [
       maxParty: 20,
       pricePerHour: 70,
     },
-    image: '/images/photo-9.jpg',
+    image: '/images/room-large.jpg',
   },
 ]
 

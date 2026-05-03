@@ -5,6 +5,7 @@
 
 import type { Metadata, Viewport } from 'next'
 import { Big_Shoulders_Text, League_Spartan } from 'next/font/google'
+import localFont from 'next/font/local'
 import Script from 'next/script'
 import './globals.css'
 import Header from '@/components/layout/Header'
@@ -27,6 +28,13 @@ const bigShouldersText = Big_Shoulders_Text({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
   variable: '--font-inter',
+  display: 'swap',
+})
+
+// Satoshi — FieldOS brand font (used only on the "Designed by FieldOS" credit)
+const satoshi = localFont({
+  src: '../../public/fonts/Satoshi-Variable.woff2',
+  variable: '--font-fieldos',
   display: 'swap',
 })
 
@@ -80,7 +88,7 @@ export default function RootLayout({
   const webSiteSchema = buildWebSiteSchema()
 
   return (
-    <html lang="en" className={`${leagueSpartan.variable} ${bigShouldersText.variable}`}>
+    <html lang="en" className={`${leagueSpartan.variable} ${bigShouldersText.variable} ${satoshi.variable}`}>
       <head>
         {/* GC-4: GA4 Script — only injected when ga4IsConfigured === true */}
         {ga4IsConfigured && (

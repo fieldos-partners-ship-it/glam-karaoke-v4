@@ -1,9 +1,13 @@
+'use client'
+
 // FoundingHero — Storefront photography hero with founding info
-// Server component
 
 import Image from 'next/image'
+import { motion, useReducedMotion } from 'framer-motion'
 
 export default function FoundingHero() {
+  const reduceMotion = useReducedMotion()
+
   return (
     <section className="relative h-[60vh] md:h-[65vh] flex items-end overflow-hidden" aria-label="Glam Karaoke founding story">
       {/* Storefront photo */}
@@ -26,13 +30,16 @@ export default function FoundingHero() {
       />
 
       {/* Content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 md:pb-20">
-        {/* Eyebrow */}
+      <motion.div
+        initial={reduceMotion ? undefined : { opacity: 0, y: 22 }}
+        animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+        className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 md:pb-20"
+      >
         <p className="menu-kicker mb-4">
           Est. March 18, 2022
         </p>
 
-        {/* P2-03 SEO + P3-03 conversion: location keyword in H1, away from bare brand name */}
         <h1 className="menu-heading mb-4 text-[52px] md:text-[76px]">
           Annandale&apos;s Karaoke Destination
         </h1>
@@ -41,7 +48,7 @@ export default function FoundingHero() {
           We opened Glam to give Northern Virginia the night-out destination it deserved.
           12 private rooms. A live main stage. And a kitchen that means it.
         </p>
-      </div>
+      </motion.div>
     </section>
   )
 }

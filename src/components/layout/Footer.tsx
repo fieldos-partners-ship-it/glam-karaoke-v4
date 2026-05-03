@@ -1,10 +1,11 @@
-// Footer — NAP, hours, nav links, social icons, PhoneLink
+// Footer — single cohesive section: brand, hours, nav, social, NAP, FieldOS credit
 // AP-018: links to /privacy
 // GC-3: uses PhoneLink for all phone links
 
 import Link from 'next/link'
 import Image from 'next/image'
 import PhoneLink from '@/components/ui/PhoneLink'
+import { businessInfo, social } from '@/data/content'
 
 // Inline SVG social icons — lucide-react does not export brand icons
 function InstagramIcon({ size = 20 }: { size?: number }) {
@@ -24,7 +25,6 @@ function FacebookIcon({ size = 20 }: { size?: number }) {
     </svg>
   )
 }
-import { businessInfo, social } from '@/data/content'
 
 const navLinks = [
   { label: 'Rooms', href: '/rooms' },
@@ -32,7 +32,6 @@ const navLinks = [
   { label: 'Events', href: '/events' },
   { label: 'About', href: '/about' },
   { label: 'Reservations', href: '/reservations' },
-  // P1-01 SEO / P3-07: Contact page added to footer nav
   { label: 'Contact', href: '/contact' },
 ]
 
@@ -41,32 +40,30 @@ export default function Footer() {
 
   return (
     <footer className="bg-glass-surface border-t border-white/[0.06]" role="contentinfo">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
-          {/* Brand + Contact */}
-          <div>
-            <Link href="/" className="inline-flex items-center mb-5" aria-label="Glam Karaoke — Home">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* One unified section — brand left, hours center, nav right, credit row at bottom */}
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-12 md:gap-10 md:items-start">
+          {/* Brand + Contact + Social */}
+          <div className="md:col-span-5">
+            <Link href="/" className="inline-flex items-center mb-3" aria-label="Glam Karaoke — Home">
               <Image
                 src="/brand/glam-karaoke-logo.png"
                 alt="Glam Karaoke"
                 width={802}
                 height={554}
-                sizes="(min-width: 768px) 180px, 150px"
-                className="h-24 w-auto md:h-28"
+                sizes="(min-width: 768px) 140px, 120px"
+                className="h-14 w-auto md:h-16"
               />
             </Link>
-            <address className="not-italic text-cool-mist text-sm font-inter leading-relaxed mb-4">
+            <address className="not-italic text-cool-mist text-sm font-inter leading-relaxed mb-2">
               {businessInfo.addressStreet}<br />
               {businessInfo.addressCity}, {businessInfo.addressState} {businessInfo.addressZip}
             </address>
-            {/* GC-3: PhoneLink with footer source */}
-            {/* w-fit removed — tap target now spans full container width on mobile */}
             <PhoneLink
               source="footer"
-              className="text-neon-teal text-sm font-inter font-semibold block mb-2 hover:text-neon-teal-hover min-h-[44px] flex items-center"
+              className="text-neon-teal text-sm font-inter font-semibold block hover:text-neon-teal-hover min-h-[40px] flex items-center"
             />
-            {/* AP-018: Social links — Instagram linked, Facebook null-safe */}
-            <div className="flex gap-4 mt-4">
+            <div className="flex gap-2 mt-1">
               <a
                 href={social.instagramUrl}
                 target="_blank"
@@ -76,7 +73,6 @@ export default function Footer() {
               >
                 <InstagramIcon size={20} />
               </a>
-              {/* AP-009: Facebook null-safe — renders nothing if URL not provided */}
               {social.facebookUrl && (
                 <a
                   href={social.facebookUrl}
@@ -92,11 +88,11 @@ export default function Footer() {
           </div>
 
           {/* Hours */}
-          <div>
-            <h3 className="font-inter font-semibold text-sm text-soft-white mb-4 tracking-[0.18em] uppercase">
-              HOURS
+          <div className="md:col-span-4">
+            <h3 className="font-inter font-semibold text-sm text-soft-white mb-3 tracking-[0.18em] uppercase">
+              Hours
             </h3>
-            <dl className="space-y-2">
+            <dl className="space-y-1.5">
               {Object.entries(businessInfo.hoursDisplay).map(([day, hours]) => (
                 <div key={day} className="flex justify-between gap-4 text-sm font-inter">
                   <dt className="text-cool-mist">{day}</dt>
@@ -104,23 +100,24 @@ export default function Footer() {
                 </div>
               ))}
             </dl>
-            <p className="text-neon-teal text-sm font-inter font-semibold mt-3">
-              Happy Hour: {businessInfo.happyHour}
+            <p className="text-neon-teal text-xs font-inter font-semibold mt-2 leading-snug">
+              <span className="uppercase tracking-[0.12em]">Happy Hour:</span>{' '}
+              <Link href="/menu" className="hover:text-neon-teal-hover underline-offset-2 hover:underline">See full schedule →</Link>
             </p>
           </div>
 
           {/* Navigation */}
-          <div>
-            <h3 className="font-inter font-semibold text-sm text-soft-white mb-4 tracking-[0.18em] uppercase">
-              EXPLORE
+          <div className="md:col-span-3">
+            <h3 className="font-inter font-semibold text-sm text-soft-white mb-3 tracking-[0.18em] uppercase">
+              Explore
             </h3>
             <nav aria-label="Footer navigation">
-              <ul className="space-y-2">
+              <ul>
                 {navLinks.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="inline-flex min-h-[44px] min-w-[44px] items-center text-cool-mist text-sm font-inter tracking-[0.03em] hover:text-soft-white transition-colors duration-150 py-2"
+                      className="inline-flex min-h-[36px] items-center text-cool-mist text-sm font-inter tracking-[0.03em] hover:text-soft-white transition-colors duration-150"
                     >
                       {link.label}
                     </Link>
@@ -131,31 +128,44 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom bar */}
-        <div className="border-t border-white/[0.06] pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-cool-mist text-xs font-inter">
-            © {currentYear} {businessInfo.name}. All rights reserved.
-          </p>
-          {/* AP-018: /privacy footer link */}
-          <Link
-            href="/privacy"
-            className="inline-flex min-h-[44px] min-w-[44px] items-center text-cool-mist text-xs font-inter hover:text-soft-white transition-colors duration-150 py-2"
-          >
-            Privacy Policy
-          </Link>
-        </div>
-
-        {/* FieldOS credit — centered, gold */}
-        <div className="pt-6 text-center">
+        {/* Credit row — same section, no divider */}
+        {/* Layout: Designed by FieldOS (far left) | © + Privacy (center) | empty (right balance) */}
+        <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-3 sm:items-center">
           <a
             href="https://fieldospartners.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex min-h-[44px] items-center justify-center font-inter text-xs tracking-[0.08em] py-2"
-            style={{ color: '#C9A84C' }}
+            className="inline-flex min-h-[44px] items-center gap-2.5 justify-self-center sm:justify-self-start transition-opacity duration-150 hover:opacity-80"
+            aria-label="Designed by FieldOS Partners — visit fieldospartners.com"
+            style={{ fontFamily: 'var(--font-fieldos), system-ui, sans-serif' }}
           >
-            Designed by FieldOS
+            <span className="text-cool-mist/70 text-xs font-medium tracking-[0.04em]">
+              Designed by
+            </span>
+            <Image
+              src="/brand/fieldos-og-logo.svg"
+              alt="FieldOS"
+              width={342}
+              height={85}
+              className="h-5 w-auto"
+              priority={false}
+            />
           </a>
+
+          <div className="flex flex-col items-center gap-2 justify-self-center sm:flex-row sm:gap-5">
+            <p className="text-cool-mist/70 text-xs font-inter">
+              © {currentYear} {businessInfo.name}. All rights reserved.
+            </p>
+            <Link
+              href="/privacy"
+              className="inline-flex min-h-[44px] items-center text-cool-mist/70 text-xs font-inter hover:text-soft-white transition-colors duration-150"
+            >
+              Privacy Policy
+            </Link>
+          </div>
+
+          {/* Right-side spacer for symmetry — keeps center cluster optically centered */}
+          <div aria-hidden="true" className="hidden sm:block" />
         </div>
       </div>
     </footer>

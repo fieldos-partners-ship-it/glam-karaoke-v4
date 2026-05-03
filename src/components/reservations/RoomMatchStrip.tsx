@@ -1,3 +1,6 @@
+'use client'
+
+import { motion, useReducedMotion } from 'framer-motion'
 import PhoneLink from '@/components/ui/PhoneLink'
 import { rooms } from '@/data/content'
 import { Sparkles, Users, Volume2 } from 'lucide-react'
@@ -8,22 +11,51 @@ const roomMoments: Record<string, string> = {
   large: 'Best for big celebrations, team nights, and all-out sing-offs (15–20).',
 }
 
+const containerVariants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.08 } },
+}
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 18 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] },
+  },
+}
+
 export default function RoomMatchStrip() {
+  const reduceMotion = useReducedMotion()
+
   return (
     <section className="bg-stage-noir px-4 py-20 sm:px-6 lg:px-8" aria-label="Choose your room">
       <div className="mx-auto max-w-7xl">
-        <div className="mb-10 max-w-3xl">
+        <motion.div
+          initial={reduceMotion ? undefined : { opacity: 0, y: 14 }}
+          whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+          className="mb-10 max-w-3xl"
+        >
           <p className="menu-kicker mb-4">ROOM MATCH</p>
           <h2 className="menu-heading mb-4 text-[40px] md:text-[56px]">Pick the vibe. Then call and claim it.</h2>
           <p className="menu-subtext-bright text-[18px] md:text-[20px]">
             Every room is private, fully lit for a night out, and built for your crew size. Call us with your headcount and we&apos;ll steer you to the right one fast.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid gap-5 lg:grid-cols-3">
+        <motion.div
+          initial={reduceMotion ? 'visible' : 'hidden'}
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.15 }}
+          variants={containerVariants}
+          className="grid gap-5 lg:grid-cols-3"
+        >
           {rooms.map((room, index) => (
-            <article
+            <motion.article
               key={room.id}
+              variants={cardVariants}
               className="group relative overflow-hidden rounded-[28px] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(24,18,24,0.9))] p-6 shadow-[0_24px_60px_rgba(0,0,0,0.34)] transition-transform duration-200 hover:-translate-y-1"
             >
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.14),transparent_28%),radial-gradient(circle_at_bottom_left,rgba(229,25,151,0.18),transparent_36%)] opacity-80" />
@@ -83,9 +115,9 @@ export default function RoomMatchStrip() {
                     : 'Call and Claim the Large Room'}
                 </PhoneLink>
               </div>
-            </article>
+            </motion.article>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   )

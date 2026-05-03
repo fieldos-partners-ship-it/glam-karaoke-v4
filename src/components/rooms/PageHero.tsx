@@ -1,8 +1,10 @@
+'use client'
+
 // PageHero — Static photo hero for /rooms page
 // 55vh height, shorter than homepage to signal data-forward page
-// Server component
 
 import Image from 'next/image'
+import { motion, useReducedMotion } from 'framer-motion'
 
 interface PageHeroProps {
   eyebrow?: string
@@ -19,6 +21,8 @@ export default function PageHero({
   backgroundAlt,
   height = 'h-[55vh]',
 }: PageHeroProps) {
+  const reduceMotion = useReducedMotion()
+
   return (
     <section className={`relative ${height} flex items-center justify-center overflow-hidden`}>
       {/* Background photo */}
@@ -40,7 +44,12 @@ export default function PageHero({
       />
 
       {/* Content */}
-      <div className="relative z-10 text-center px-4 max-w-3xl mx-auto">
+      <motion.div
+        initial={reduceMotion ? undefined : { opacity: 0, y: 18 }}
+        animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+        className="relative z-10 text-center px-4 max-w-3xl mx-auto"
+      >
         {eyebrow && (
           <p className="menu-kicker mb-4">
             {eyebrow}
@@ -49,7 +58,7 @@ export default function PageHero({
         <h1 className="menu-heading text-[42px] md:text-[64px]">
           {title}
         </h1>
-      </div>
+      </motion.div>
     </section>
   )
 }

@@ -39,7 +39,7 @@ export default function ContactPage() {
             Contact Glam Karaoke
           </h1>
           <p className="menu-subtext-bright max-w-xl text-[19px] md:text-[22px]">
-            Call to reserve a room, ask about private events, or just find out what&apos;s going on tonight.
+            Call to reserve a room or find out what&apos;s going on tonight.
           </p>
         </div>
       </section>
@@ -104,30 +104,26 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Right — map embed placeholder + CTA */}
+            {/* Right — embedded Google map + CTA */}
             <div className="space-y-8">
-              {/* Google Maps embed — placeholder until client provides API key */}
-              {/* MAP_TODO: Replace iframe src with:
-                  https://www.google.com/maps/embed/v1/place?key=[GOOGLE_MAPS_EMBED_API_KEY]&q=place_id:ChIJT5fw6AWzt4kR_11B3_sLbXo
-                  Requires Google Maps Embed API key from client */}
+              {/* Real Google Maps embed — no API key required via /maps?q=&output=embed */}
               <div
-                className="rounded-2xl overflow-hidden bg-glass-surface border border-white/[0.06] h-64 flex items-center justify-center"
-                aria-label="Glam Karaoke location map placeholder"
+                className="relative rounded-2xl overflow-hidden bg-stage-noir border border-white/[0.06] h-72 md:h-80 shadow-[0_18px_60px_rgba(0,0,0,0.32)]"
+                aria-label="Glam Karaoke location on Google Maps"
               >
-                <div className="text-center px-4">
-                  <p className="text-cool-mist font-inter text-sm mb-3">
-                    4369 John Marr Dr, Annandale, VA 22003
-                  </p>
-                  <a
-                    href={`https://www.google.com/maps/place/?q=place_id:${businessInfo.googlePlaceId}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-neon-teal font-inter font-semibold text-sm hover:text-neon-teal-hover transition-colors duration-150 min-h-[44px]"
-                    aria-label="View Glam Karaoke on Google Maps"
-                  >
-                    View on Google Maps →
-                  </a>
-                </div>
+                <iframe
+                  src={`https://www.google.com/maps?q=${encodeURIComponent(businessInfo.address)}&output=embed`}
+                  title="Glam Karaoke — 4369 John Marr Drive, Annandale VA 22003"
+                  loading="lazy"
+                  allowFullScreen
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="absolute inset-0 h-full w-full"
+                  style={{ border: 0 }}
+                />
+                <div
+                  className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl"
+                  aria-hidden="true"
+                />
               </div>
 
               {/* Reserve CTA */}

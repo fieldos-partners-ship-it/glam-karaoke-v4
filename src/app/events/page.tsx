@@ -4,9 +4,7 @@
 
 import type { Metadata } from 'next'
 import { siteUrl } from '@/data/content'
-// IMAGE_TODO: EventsSplitHero uses /images/ambiance-4.jpg — swap for client-provided event photo/video when available.
 import EventsSplitHero from '@/components/events/EventsSplitHero'
-import WhatToExpect from '@/components/events/WhatToExpect'
 import InstagramGrid from '@/components/events/InstagramGrid'
 
 export const metadata: Metadata = {
@@ -19,13 +17,13 @@ export const metadata: Metadata = {
     title: 'DJ Nights at Glam Karaoke — Annandale VA',
     description: 'DJ nights on the main stage. Follow @glamkaraoke on Instagram for the latest event lineup.',
     url: `${siteUrl}/events`,
-    images: [{ url: '/images/ambiance-4.jpg', width: 1200, height: 630, alt: 'DJ night at Glam Karaoke main stage Annandale VA' }],
+    images: [{ url: '/images/photo-10.jpg', width: 1200, height: 630, alt: 'DJ night at Glam Karaoke main stage Annandale VA' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'DJ Nights at Glam Karaoke — Annandale VA',
     description: 'DJ nights on the main stage. Follow @glamkaraoke on Instagram for the latest event lineup.',
-    images: ['/images/ambiance-4.jpg'],
+    images: ['/images/photo-10.jpg'],
   },
 }
 
@@ -33,7 +31,6 @@ export default function EventsPage() {
   return (
     <>
       <EventsSplitHero />
-      <WhatToExpect />
       <InstagramGrid />
     </>
   )

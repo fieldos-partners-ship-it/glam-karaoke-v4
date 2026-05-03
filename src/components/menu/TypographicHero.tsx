@@ -1,6 +1,7 @@
 'use client'
 
 import { useRef } from 'react'
+import { motion, useReducedMotion } from 'framer-motion'
 import { menuExperience } from '@/data/content'
 
 export type MenuTab = 'food' | 'drinks' | 'happy-hour'
@@ -21,6 +22,7 @@ export default function TypographicHero({
   onTabChange,
 }: TypographicHeroProps) {
   const tabRefs = useRef<Array<HTMLButtonElement | null>>([])
+  const reduceMotion = useReducedMotion()
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLButtonElement>, index: number) => {
     if (!['ArrowRight', 'ArrowLeft', 'Home', 'End'].includes(event.key)) {
@@ -56,22 +58,28 @@ export default function TypographicHero({
   return (
     <section className="bg-stage-noir pt-28 md:pt-36 pb-12 md:pb-14" aria-label="Glam Karaoke menu">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p className="menu-kicker mb-4">
-          THE MENU
-        </p>
+        <motion.div
+          initial={reduceMotion ? undefined : { opacity: 0, y: 18 }}
+          animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
+          transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
+        >
+          <p className="menu-kicker mb-4">
+            THE MENU
+          </p>
 
-        <h1 className="font-clash font-extrabold text-[48px] md:text-[72px] text-soft-white leading-[0.92] tracking-[-0.05em] mb-4 max-w-4xl">
-          {menuExperience.heroTitle}
-        </h1>
+          <h1 className="font-clash font-extrabold text-[48px] md:text-[72px] text-soft-white leading-[0.92] tracking-[-0.05em] mb-4 max-w-4xl">
+            {menuExperience.heroTitle}
+          </h1>
 
-        <p className="font-inter font-medium text-[18px] md:text-[24px] text-soft-white/70 tracking-[0.03em] max-w-4xl mb-10">
-          {menuExperience.heroSupport.split('·').map((chunk, index, array) => (
-            <span key={chunk.trim()}>
-              {chunk.trim()}
-              {index < array.length - 1 ? <span className="mx-3 text-neon-teal">+</span> : null}
-            </span>
-          ))}
-        </p>
+          <p className="font-inter font-medium text-[18px] md:text-[24px] text-soft-white/70 tracking-[0.03em] max-w-4xl mb-10">
+            {menuExperience.heroSupport.split('·').map((chunk, index, array) => (
+              <span key={chunk.trim()}>
+                {chunk.trim()}
+                {index < array.length - 1 ? <span className="mx-3 text-neon-teal">+</span> : null}
+              </span>
+            ))}
+          </p>
+        </motion.div>
 
         <div
           role="tablist"
