@@ -135,7 +135,7 @@ export default function Footer() {
             href="https://fieldospartners.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex min-h-[44px] items-center gap-2.5 justify-self-center sm:justify-self-start transition-opacity duration-150 hover:opacity-80"
+            className="inline-flex min-h-[44px] items-center gap-2.5 justify-self-center order-2 sm:order-1 sm:justify-self-start transition-opacity duration-150 hover:opacity-80"
             aria-label="Designed by FieldOS Partners — visit fieldospartners.com"
             style={{ fontFamily: 'var(--font-fieldos), system-ui, sans-serif' }}
           >
@@ -152,7 +152,7 @@ export default function Footer() {
             />
           </a>
 
-          <div className="flex flex-col items-center gap-2 justify-self-center sm:flex-row sm:gap-5">
+          <div className="flex flex-col items-center gap-2 justify-self-center order-1 sm:order-2 sm:flex-row sm:gap-5">
             <p className="text-cool-mist/70 text-xs font-inter">
               © {currentYear} {businessInfo.name}. All rights reserved.
             </p>

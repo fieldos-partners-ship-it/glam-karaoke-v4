@@ -53,8 +53,7 @@ export const rooms = [
     mostPopular: false,
     features: [
       'Private room',
-      'Traditional karaoke system',
-      'Tablet song selection',
+      'Korean traditional karaoke system',
       'Professional sound system',
       'Club-style lighting',
       'Tambourines included',
