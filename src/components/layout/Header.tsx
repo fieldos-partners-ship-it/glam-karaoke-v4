@@ -18,6 +18,8 @@ const navLinks = [
   { label: 'Menu', href: '/menu' },
   { label: 'Events', href: '/events' },
   { label: 'Reservations', href: '/reservations' },
+  { label: 'About', href: '/about' },
+  { label: 'Contact', href: '/contact' },
 ]
 
 export default function Header() {
@@ -81,7 +83,7 @@ export default function Header() {
             {/* Desktop nav */}
             <nav
               className={`hidden md:flex items-center transition-[gap] duration-200 ease-out ${
-                isCompressed ? 'gap-4 lg:gap-6' : 'gap-5 lg:gap-7'
+                isCompressed ? 'gap-3 lg:gap-5' : 'gap-4 lg:gap-6'
               }`}
               aria-label="Main navigation"
             >
