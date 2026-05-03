@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image'
 import { motion, useReducedMotion } from 'framer-motion'
 import CTAButton from '@/components/ui/CTAButton'
 import PhoneLink from '@/components/ui/PhoneLink'
@@ -89,13 +88,13 @@ export default function ReservationsHero() {
               <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.08),transparent_30%,rgba(229,25,151,0.12))]" />
 
               <div className="relative aspect-[4/5] overflow-hidden rounded-[24px] border border-white/10">
-                <Image
-                  src="/images/interior-2.jpg"
-                  alt="Guests at Glam Karaoke near the bar and private rooms"
-                  fill
-                  sizes="(min-width: 1024px) 36rem, 90vw"
-                  className="object-cover"
-                  priority
+                <video
+                  src="/videos/glam-reel.mp4"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="absolute inset-0 h-full w-full object-cover"
                 />
                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(10,12,17,0.08),rgba(10,12,17,0.64))]" />
 
