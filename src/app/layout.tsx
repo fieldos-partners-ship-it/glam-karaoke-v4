@@ -129,6 +129,47 @@ export default function RootLayout({
         <Footer />
         {/* GC-7: MobileStickyBar — server component, md:hidden */}
         <MobileStickyBar />
+
+        {/* GoDaddy Conversations (Reamaze) — config must run before loader */}
+        <Script id="reamaze-config" strategy="afterInteractive">
+          {`
+            var _support = _support || { 'ui': {}, 'user': {} };
+            _support['account'] = 'f74dd4d2-6a49-43d5-8d4e-c440a4f1cd1a';
+            _support['ui']['contactMode'] = 'mixed';
+            _support['ui']['enableKb'] = 'true';
+            _support['ui']['mailbox'] = '1249248';
+            _support['ui']['styles'] = {
+              widgetColor: '#f41a8f',
+              gradient: true,
+            };
+            _support['ui']['shoutboxFacesMode'] = '';
+            _support['ui']['widget'] = {
+              allowBotProcessing: 'true',
+              slug: 'glamkaraoke-dot-com',
+              label: {
+                text: 'Let me know if you have any questions! Would you like to book a room?',
+                mode: "notification",
+                delay: 3,
+                duration: 30,
+                primary: 'What are your business hours for visiting?',
+                secondary: '',
+                sound: true,
+              },
+              position: 'bottom-right'
+            };
+            _support['ui']['overrides'] = _support['ui']['overrides'] || {};
+            _support['ui']['overrides']['confirmationMessage'] = '';
+            _support['apps'] = {
+              recentConversations: {},
+              faq: { "enabled": true }
+            };
+          `}
+        </Script>
+        <Script
+          id="reamaze-loader"
+          src="https://cdn.reamaze.com/assets/reamaze-loader.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   )
