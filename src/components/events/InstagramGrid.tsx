@@ -79,7 +79,7 @@ export default function InstagramGrid() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.05 }}
           variants={containerVariants}
-          className="grid grid-cols-2 md:grid-cols-3 gap-3"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3"
         >
           {galleryImages.map((img) => (
             <motion.a
@@ -88,15 +88,16 @@ export default function InstagramGrid() {
               href={social.instagramUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="relative aspect-square rounded-xl overflow-hidden group block bg-glass-surface"
+              className="relative aspect-[9/16] rounded-xl overflow-hidden group block bg-glass-surface"
               aria-label={`${img.alt} — view more on Instagram`}
             >
               <Image
                 src={img.src}
                 alt={img.alt}
                 fill
+                quality={90}
                 className="object-cover group-hover:scale-[1.04] transition-transform duration-[350ms] ease-[cubic-bezier(0.16,1,0.3,1)]"
-                sizes="(max-width: 768px) 50vw, 33vw"
+                sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
               />
               <div className="absolute inset-0 bg-stage-noir/45 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center">
                 <span className="text-soft-white font-inter font-semibold text-sm inline-flex items-center gap-1.5">
