@@ -5,7 +5,6 @@
 import type { Metadata } from 'next'
 import { siteUrl } from '@/data/content'
 import EventsSplitHero from '@/components/events/EventsSplitHero'
-import InstagramGrid from '@/components/events/InstagramGrid'
 
 export const metadata: Metadata = {
   title: 'DJ Nights & Events — Glam Karaoke Annandale VA',
@@ -31,7 +30,6 @@ export default function EventsPage() {
   return (
     <>
       <EventsSplitHero />
-      <InstagramGrid />
     </>
   )
 }

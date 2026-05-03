@@ -24,7 +24,7 @@ export default function PageHero({
   const reduceMotion = useReducedMotion()
 
   return (
-    <section className={`relative ${height} flex items-center justify-center overflow-hidden`}>
+    <section className={`relative ${height} flex items-center justify-center overflow-hidden pt-28 md:pt-32`}>
       {/* Background photo */}
       <div className="absolute inset-0">
         <Image

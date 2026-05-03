@@ -18,7 +18,6 @@ const navLinks = [
   { label: 'Menu', href: '/menu' },
   { label: 'Events', href: '/events' },
   { label: 'Reservations', href: '/reservations' },
-  { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },
 ]
 
