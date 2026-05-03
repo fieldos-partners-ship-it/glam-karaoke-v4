@@ -9,15 +9,20 @@ import CTAButton from '@/components/ui/CTAButton'
 import PhoneLink from '@/components/ui/PhoneLink'
 import { businessInfo, social } from '@/data/content'
 import { AtSign, PhoneCall } from 'lucide-react'
+import EventsDiscoBall from '@/components/events/EventsDiscoBall'
+import EventsMic from '@/components/events/EventsMic'
 
 export default function EventsSplitHero() {
   const reduceMotion = useReducedMotion()
 
   return (
     <section
-      className="relative overflow-hidden bg-stage-noir px-4 pb-24 pt-28 sm:px-6 lg:px-8 lg:pb-32 lg:pt-36"
+      className="relative overflow-hidden bg-stage-noir px-4 pb-14 pt-40 sm:px-6 lg:px-8 lg:pb-20 lg:pt-48"
       aria-label="Follow Glam Karaoke on Instagram for event updates"
     >
+      <EventsDiscoBall />
+      <EventsMic />
+
       {/* Atmospheric backdrop */}
       <div className="absolute inset-0">
         <Image

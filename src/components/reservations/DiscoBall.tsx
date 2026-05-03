@@ -66,8 +66,6 @@ for (let row = 0; row < 11; row += 2) {
   }
 }
 
-const beamAngles = [-62, -28, 0, 26, 58]
-
 // Shared inner ball renderer — accepts tiles array for mobile/desktop split
 function DiscoBallInner({
   tiles,
@@ -111,8 +109,8 @@ function DiscoBallInner({
 
       <motion.div
         className="absolute inset-[-18%] rounded-full bg-[linear-gradient(115deg,transparent_22%,rgba(255,255,255,0.9)_50%,transparent_80%)] opacity-50 mix-blend-screen blur-[2px]"
-        animate={reduceMotion ? { x: '0%' } : { x: ['-135%', '135%'] }}
-        transition={reduceMotion ? undefined : { duration: 5.8, repeat: Infinity, ease: 'easeInOut' }}
+        animate={reduceMotion ? { x: '0%' } : { x: ['-135%', '135%', '-135%'] }}
+        transition={reduceMotion ? undefined : { duration: 8.4, repeat: Infinity, ease: 'easeInOut' }}
       />
 
       <motion.div
@@ -130,29 +128,11 @@ export default function DiscoBall() {
   return (
     <div className="relative mx-auto h-[300px] w-[300px] sm:h-[360px] sm:w-[360px] lg:h-[420px] lg:w-[420px]">
       <motion.div
-        className="absolute left-1/2 top-0 h-28 w-px -translate-x-1/2 bg-gradient-to-b from-white/10 via-white/40 to-transparent"
+        className="absolute left-1/2 top-0 h-44 w-px -translate-x-1/2 bg-gradient-to-b from-white/10 via-white/40 to-transparent"
         animate={reduceMotion ? { opacity: 0.8 } : { opacity: [0.55, 0.95, 0.6] }}
         transition={reduceMotion ? undefined : { duration: 3.8, repeat: Infinity, ease: 'easeInOut' }}
       />
 
-      {beamAngles.map((angle, index) => (
-        <motion.div
-          key={angle}
-          className="absolute left-1/2 top-[104px] h-[220px] w-[110px] origin-top -translate-x-1/2 rounded-full bg-[linear-gradient(180deg,rgba(255,255,255,0.28),rgba(229,25,151,0.06),transparent_72%)] blur-2xl"
-          style={{ transform: `translateX(-50%) rotate(${angle}deg)` }}
-          animate={
-            reduceMotion
-              ? { opacity: 0.2 }
-              : { opacity: [0.12, 0.28, 0.14], scaleY: [0.96, 1.06, 0.98] }
-          }
-          transition={{
-            duration: 4.2 + index * 0.35,
-            repeat: Infinity,
-            ease: 'easeInOut',
-            delay: index * 0.25,
-          }}
-        />
-      ))}
 
       {/* Mobile: ~30 simplified tiles to reduce animation budget on 375px viewports */}
       <div className="sm:hidden">

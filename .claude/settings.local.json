@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:glam-karaoke-weld.vercel.app)",
+      "Bash(git reset:*)",
+      "Bash(npx tsc:*)",
+      "Bash(npm run *)",
+      "Bash(pip install *)",
+      "Bash(instaloader --version)",
+      "Bash(python3 -m pip install instaloader -q)",
+      "Bash(python3 -m instaloader --version)",
+      "Read(//private/tmp/**)",
+      "Bash(python3 -m instaloader --no-videos --no-video-thumbnails --no-captions --no-metadata-json --no-compress-json --count 30 --dirname-pattern=glam-insta-pull glamkaraoke)",
+      "Bash(git -C /Users/khlwork/Desktop/FieldOS/other-client-sites/glam-karaoke-v4 status --short)",
+      "Bash(curl -s http://localhost:3001)",
+      "Bash(PORT=3005 npm run *)",
+      "Bash(curl -s http://localhost:3005)",
+      "mcp__chrome-devtools__new_page",
+      "mcp__chrome-devtools__emulate",
+      "mcp__chrome-devtools__navigate_page",
+      "mcp__chrome-devtools__take_screenshot",
+      "mcp__chrome-devtools__evaluate_script",
+      "Bash(kill %betjtprg5)",
+      "mcp__chrome-devtools__list_console_messages",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)"
+    ]
+  }
+}

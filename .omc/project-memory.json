@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastScanned": 1776127370136,
+  "lastScanned": 1776499974605,
   "projectRoot": "/Users/khlwork/Desktop/FieldOS/other-client-sites/glam-karaoke-v4",
   "techStack": {
     "languages": [
@@ -73,12 +73,21 @@
   },
   "customNotes": [],
   "directoryMap": {
+    "deliverables": {
+      "path": "deliverables",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1776499974584,
+      "keyFiles": []
+    },
     "public": {
       "path": "public",
       "purpose": "Public files",
-      "fileCount": 1,
-      "lastAccessed": 1776127370121,
+      "fileCount": 3,
+      "lastAccessed": 1776499974586,
       "keyFiles": [
+        "logo acutal.svg",
+        "png logo final.png",
         "robots.txt"
       ]
     },
@@ -86,14 +95,14 @@
       "path": "src",
       "purpose": "Source code",
       "fileCount": 0,
-      "lastAccessed": 1776127370121,
+      "lastAccessed": 1776499974586,
       "keyFiles": []
     },
     "src/app": {
       "path": "src/app",
       "purpose": "Application code",
-      "fileCount": 5,
-      "lastAccessed": 1776127370123,
+      "fileCount": 6,
+      "lastAccessed": 1776499974587,
       "keyFiles": [
         "favicon.ico",
         "globals.css",
@@ -104,14 +113,14 @@
       "path": "src/components",
       "purpose": "UI components",
       "fileCount": 0,
-      "lastAccessed": 1776127370123,
+      "lastAccessed": 1776499974588,
       "keyFiles": []
     },
     "src/data": {
       "path": "src/data",
       "purpose": "Data files",
       "fileCount": 1,
-      "lastAccessed": 1776127370123,
+      "lastAccessed": 1776499974588,
       "keyFiles": [
         "content.ts"
       ]
@@ -120,7 +129,7 @@
       "path": "src/lib",
       "purpose": "Library code",
       "fileCount": 1,
-      "lastAccessed": 1776127370123,
+      "lastAccessed": 1776499974589,
       "keyFiles": [
         "analytics.ts"
       ]
@@ -128,15 +137,39 @@
   },
   "hotPaths": [
     {
-      "path": "src/components/layout/Header.tsx",
-      "accessCount": 8,
-      "lastAccessed": 1776129310190,
+      "path": "src/components/layout/Footer.tsx",
+      "accessCount": 13,
+      "lastAccessed": 1776512304620,
       "type": "file"
     },
     {
-      "path": "src/components/layout/Footer.tsx",
+      "path": "src",
+      "accessCount": 11,
+      "lastAccessed": 1776511747013,
+      "type": "directory"
+    },
+    {
+      "path": "src/components/layout/Header.tsx",
+      "accessCount": 11,
+      "lastAccessed": 1776511771280,
+      "type": "file"
+    },
+    {
+      "path": "src/components/home/VideoLoopHero.tsx",
+      "accessCount": 8,
+      "lastAccessed": 1776501841929,
+      "type": "file"
+    },
+    {
+      "path": "src/app/layout.tsx",
+      "accessCount": 7,
+      "lastAccessed": 1776511740679,
+      "type": "file"
+    },
+    {
+      "path": "src/components/ui/AgeGate.tsx",
       "accessCount": 6,
-      "lastAccessed": 1776129314399,
+      "lastAccessed": 1776524699488,
       "type": "file"
     },
     {
@@ -146,22 +179,64 @@
       "type": "file"
     },
     {
+      "path": "src/app/contact/page.tsx",
+      "accessCount": 5,
+      "lastAccessed": 1776511929098,
+      "type": "file"
+    },
+    {
       "path": "src/app/globals.css",
       "accessCount": 4,
       "lastAccessed": 1776128734053,
       "type": "file"
     },
     {
-      "path": "src/components/home/VideoLoopHero.tsx",
+      "path": "src/app/events/page.tsx",
       "accessCount": 4,
-      "lastAccessed": 1776131630443,
+      "lastAccessed": 1776500968077,
       "type": "file"
     },
     {
-      "path": "src/app/layout.tsx",
+      "path": "src/components/events/EventsSplitHero.tsx",
       "accessCount": 3,
-      "lastAccessed": 1776137013361,
+      "lastAccessed": 1776500965093,
       "type": "file"
+    },
+    {
+      "path": "src/components/home/DJNightsTeaser.tsx",
+      "accessCount": 3,
+      "lastAccessed": 1776500965829,
+      "type": "file"
+    },
+    {
+      "path": "src/components/events/EventCalendar.tsx",
+      "accessCount": 3,
+      "lastAccessed": 1776500970064,
+      "type": "file"
+    },
+    {
+      "path": "src/data/content.ts",
+      "accessCount": 3,
+      "lastAccessed": 1776501849973,
+      "type": "file"
+    },
+    {
+      "path": "src/components/about/WhatMakesGlam.tsx",
+      "accessCount": 3,
+      "lastAccessed": 1776501857967,
+      "type": "file"
+    },
+    {
+      "path": "src/components/ui/TestimonialCarousel.tsx",
+      "accessCount": 3,
+      "lastAccessed": 1776511857633,
+      "type": "directory"
+    },
+    {
+      "path": "",
+      "accessCount": 3,
+      "lastAccessed": 1776524544290,
+      "type": "directory"
     },
     {
       "path": "tailwind.config.ts",
@@ -176,16 +251,94 @@
       "type": "file"
     },
     {
-      "path": "src",
-      "accessCount": 1,
-      "lastAccessed": 1776127596292,
-      "type": "directory"
+      "path": "src/components/menu/TypographicHero.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1776512427053,
+      "type": "file"
     },
     {
       "path": "public/images/image-inventory.json",
       "accessCount": 1,
       "lastAccessed": 1776127681161,
       "type": "file"
+    },
+    {
+      "path": "src/components/events/InstagramGrid.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1776501837303,
+      "type": "file"
+    },
+    {
+      "path": "src/components/private-events/InquiryForm.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1776501842139,
+      "type": "file"
+    },
+    {
+      "path": "src/app/rooms/page.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1776501845897,
+      "type": "file"
+    },
+    {
+      "path": "src/components/rooms/RoomTierComparison.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1776501846245,
+      "type": "file"
+    },
+    {
+      "path": "src/components/about/FoundingHero.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1776501846456,
+      "type": "file"
+    },
+    {
+      "path": "src/app/about/page.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1776501846627,
+      "type": "file"
+    },
+    {
+      "path": "src/data",
+      "accessCount": 1,
+      "lastAccessed": 1776501850690,
+      "type": "directory"
+    },
+    {
+      "path": "src/components/about/PressLogos.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1776501858023,
+      "type": "file"
+    },
+    {
+      "path": ".claude/CONTEXT.md",
+      "accessCount": 1,
+      "lastAccessed": 1776509804804,
+      "type": "file"
+    },
+    {
+      "path": "src/components/reservations/RoomMatchStrip.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1776511747526,
+      "type": "file"
+    },
+    {
+      "path": "src/app/page.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1776511756212,
+      "type": "file"
+    },
+    {
+      "path": "src/components/layout/MobileStickyBar.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1776511771829,
+      "type": "file"
+    },
+    {
+      "path": "src/components",
+      "accessCount": 1,
+      "lastAccessed": 1776512420235,
+      "type": "directory"
     }
   ],
   "userDirectives": []

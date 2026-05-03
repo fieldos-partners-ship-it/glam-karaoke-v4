@@ -20,6 +20,10 @@ export default function ReservationsHero() {
     <section className="relative overflow-hidden bg-stage-noir px-4 pb-16 pt-28 sm:px-6 lg:px-8 lg:pb-24 lg:pt-36" aria-label="Call to reserve a private karaoke room">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.12),transparent_26%),radial-gradient(circle_at_82%_18%,rgba(229,25,151,0.16),transparent_26%),linear-gradient(180deg,rgba(255,255,255,0.02),transparent_30%)]" />
 
+      <div className="absolute right-0 top-1/2 z-20 hidden -translate-y-1/2 lg:block lg:right-0">
+        <DiscoBall />
+      </div>
+
       <div className="relative mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:items-center">
         <motion.div
           initial={reduceMotion ? undefined : { opacity: 0, y: 18 }}
@@ -79,10 +83,6 @@ export default function ReservationsHero() {
           animate={reduceMotion ? undefined : { opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, ease: 'easeOut', delay: 0.08 }}
         >
-          <div className="absolute right-0 top-0 z-20 lg:right-8">
-            <DiscoBall />
-          </div>
-
           <div className="relative z-10 mx-auto max-w-[420px] pt-28 sm:pt-32 lg:ml-6 lg:max-w-[460px] lg:pt-44">
             <div className="relative overflow-hidden rounded-[30px] border border-white/15 bg-[linear-gradient(160deg,rgba(255,255,255,0.14),rgba(24,18,24,0.95))] p-4 shadow-[0_34px_90px_rgba(0,0,0,0.46)]">
               <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.08),transparent_30%,rgba(229,25,151,0.12))]" />
